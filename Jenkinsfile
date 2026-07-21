@@ -12,22 +12,28 @@ pipeline {
     stages {
         stage('Checkout Code') {
             steps {
-                echo "Pulling code from repository..."
-                checkout scm
+                echo "Cloning code from repository..."
+                dir('workspace') {
+                    git branch: 'devops', 
+                        url: 'https://github.com/usamian/devops-ci-project.git',
+                        credentialsId: ''
+                }
             }
         }
         
         stage('SonarQube Analysis') {
             steps {
                 echo "Running code quality analysis..."
-                sh '''
-                    sonar-scanner \
-                      -Dsonar.projectKey=atlas-ai \
-                      -Dsonar.sources=src/ \
-                      -Dsonar.host.url=http://sonarqube:9000 \
-                      -Dsonar.token=squ_4e8fc8fdbd46457acc13275a8cfcfed5eeda229a \
-                      -Dsonar.sourceEncoding=UTF-8
-                '''
+                dir('workspace') {
+                    sh '''
+                        sonar-scanner \
+                          -Dsonar.projectKey=atlas-ai \
+                          -Dsonar.sources=src/ \
+                          -Dsonar.host.url=http://sonarqube:9000 \
+                          -Dsonar.token=squ_4e8fc8fdbd46457acc13275a8cfcfed5eeda229a \
+                          -Dsonar.sourceEncoding=UTF-8
+                    '''
+                }
             }
         }
         

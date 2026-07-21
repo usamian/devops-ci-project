@@ -5,7 +5,7 @@ pipeline {
         IMAGE_NAME = "atlas-ai-app"
         IMAGE_TAG = "${BUILD_NUMBER}"
         SONAR_HOST_URL = "http://sonarqube:9000"
-        SONAR_TOKEN = credentials('sonarqube-token')
+        SONAR_TOKEN = "squ_ee17f8466d3438b21d9b9257dbe7e79b1d97c9f1"
         PATH = "${env.PATH}:/var/jenkins_home/bin"
     }
     
@@ -30,7 +30,7 @@ pipeline {
                           -Dsonar.projectKey=atlas-ai \
                           -Dsonar.sources=src/ \
                           -Dsonar.host.url=http://sonarqube:9000 \
-                          -Dsonar.token=${SONAR_TOKEN} \
+                          -Dsonar.token=squ_ee17f8466d3438b21d9b9257dbe7e79b1d97c9f1 \
                           -Dsonar.sourceEncoding=UTF-8
                     '''
                 }

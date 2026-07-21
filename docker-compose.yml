@@ -17,7 +17,6 @@ services:
     environment:
       - JAVA_OPTS=-Djenkins.install.runSetupWizard=false
     privileged: true
-    user: root
 
   sonarqube:
     image: sonarqube:community

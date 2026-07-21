@@ -5,8 +5,7 @@ pipeline {
         IMAGE_NAME = "atlas-ai-app"
         IMAGE_TAG = "${BUILD_NUMBER}"
         SONAR_HOST_URL = "http://sonarqube:9000"
-        SONAR_LOGIN = "admin"
-        SONAR_PASSWORD = "Usama7862601..."
+        SONAR_TOKEN = "squ_4e8fc8fdbd46457acc13275a8cfcfed5eeda229a"
         PATH = "${env.PATH}:/tmp/bin"
     }
     
@@ -26,8 +25,7 @@ pipeline {
                       -Dsonar.projectKey=atlas-ai \
                       -Dsonar.sources=src/ \
                       -Dsonar.host.url=http://sonarqube:9000 \
-                      -Dsonar.login=admin \
-                      -Dsonar.password=Usama7862601... \
+                      -Dsonar.token=squ_4e8fc8fdbd46457acc13275a8cfcfed5eeda229a \
                       -Dsonar.sourceEncoding=UTF-8
                 '''
             }

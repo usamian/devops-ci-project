@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   jenkins:
-    image: jenkins/jenkins:lts-jdk17
+    image: jenkins/jenkins:lts
     container_name: jenkins-server
     restart: unless-stopped
     ports:
@@ -13,6 +13,7 @@ services:
     networks:
       - devops-network
     environment:
+      - JENKINS_URL=http://localhost:8080/
       - JAVA_OPTS=-Djenkins.install.runSetupWizard=false
     privileged: true
 
@@ -29,6 +30,7 @@ services:
     networks:
       - devops-network
     environment:
+      - JENKINS_URL=http://localhost:8080/
       - SONAR_JDBC_URL=
       - SONAR_JDBC_USERNAME=sonar
       - SONAR_JDBC_PASSWORD=sonar

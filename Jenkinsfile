@@ -6,7 +6,7 @@ pipeline {
         IMAGE_TAG = "${BUILD_NUMBER}"
         SONAR_HOST_URL = "http://sonarqube:9000"
         SONAR_LOGIN = "admin"
-        SONAR_PASSWORD = "admin"
+        SONAR_PASSWORD = "Usama7862601"
         PATH = "${env.PATH}:/tmp/bin"
     }
     
@@ -27,7 +27,7 @@ pipeline {
                       -Dsonar.sources=src/ \
                       -Dsonar.host.url=http://sonarqube:9000 \
                       -Dsonar.login=admin \
-                      -Dsonar.password=admin \
+                      -Dsonar.password=Usama7862601 \
                       -Dsonar.sourceEncoding=UTF-8
                 '''
             }

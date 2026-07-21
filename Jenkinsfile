@@ -4,7 +4,9 @@ pipeline {
     environment {
         IMAGE_NAME = "atlas-ai-app"
         IMAGE_TAG = "${BUILD_NUMBER}"
-        SONARQUBE_URL = "http://sonarqube:9000"
+        SONAR_HOST_URL = "http://sonarqube:9000"
+        SONAR_LOGIN = "admin"
+        SONAR_PASSWORD = "admin"
     }
     
     stages {
@@ -18,16 +20,15 @@ pipeline {
         stage('SonarQube Analysis') {
             steps {
                 echo "Running code quality analysis..."
-                withSonarQubeEnv('sonarqube-server') {
-                    sh '''
+                sh '''
                     sonar-scanner \
                       -Dsonar.projectKey=atlas-ai \
                       -Dsonar.sources=src/ \
                       -Dsonar.host.url=http://sonarqube:9000 \
                       -Dsonar.login=admin \
-                      -Dsonar.password=admin
-                    '''
-                }
+                      -Dsonar.password=admin \
+                      -Dsonar.sourceEncoding=UTF-8
+                '''
             }
         }
         
@@ -35,7 +36,7 @@ pipeline {
             steps {
                 echo "Building Docker image..."
                 sh '''
-                docker build -t ${IMAGE_NAME}:${IMAGE_TAG} .
+                    docker build -t ${IMAGE_NAME}:${IMAGE_TAG} .
                 '''
             }
         }

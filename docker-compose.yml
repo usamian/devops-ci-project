@@ -4,18 +4,20 @@ services:
   jenkins:
     image: jenkins/jenkins:lts
     container_name: jenkins-server
+    user: root
     restart: unless-stopped
     ports:
       - "8080:8080"
       - "50000:50000"
     volumes:
       - jenkins_data:/var/jenkins_home
+      - /var/run/docker.sock:/var/run/docker.sock
     networks:
       - devops-network
     environment:
-      - JENKINS_URL=http://localhost:8080/
       - JAVA_OPTS=-Djenkins.install.runSetupWizard=false
     privileged: true
+    user: root
 
   sonarqube:
     image: sonarqube:community
@@ -30,18 +32,32 @@ services:
     networks:
       - devops-network
     environment:
-      - JENKINS_URL=http://localhost:8080/
-      - SONAR_JDBC_URL=
+      - SONAR_JDBC_URL=jdbc:postgresql://postgres:5432/sonarqube
       - SONAR_JDBC_USERNAME=sonar
       - SONAR_JDBC_PASSWORD=sonar
+      - SONAR_FORCEAUTHENTICATION=false
     depends_on:
-      - jenkins
+      - postgres
+
+  postgres:
+    image: postgres:15
+    container_name: sonarqube-postgres
+    restart: unless-stopped
+    environment:
+      - POSTGRES_USER=sonar
+      - POSTGRES_PASSWORD=sonar
+      - POSTGRES_DB=sonarqube
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - devops-network
 
 volumes:
   jenkins_data:
   sonarqube_data:
   sonarqube_extensions:
   sonarqube_logs:
+  postgres_data:
 
 networks:
   devops-network:

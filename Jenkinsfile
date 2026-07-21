@@ -3,10 +3,9 @@ pipeline {
     
     environment {
         IMAGE_NAME = "atlas-ai-app"
-        IMAGE_TAG = "${BUILD_NUMBER}"
+        IMAGE_TAG = "latest"
         SONAR_HOST_URL = "http://sonarqube:9000"
-        SONAR_TOKEN = "squ_4e8fc8fdbd46457acc13275a8cfcfed5eeda229a"
-        PATH = "${env.PATH}:/tmp/bin"
+        SONAR_TOKEN = credentials('sonarqube-token')
     }
     
     stages {
@@ -20,14 +19,16 @@ pipeline {
         stage('SonarQube Analysis') {
             steps {
                 echo "Running code quality analysis..."
-                sh '''
-                    sonar-scanner \
-                      -Dsonar.projectKey=atlas-ai \
-                      -Dsonar.sources=src/ \
-                      -Dsonar.host.url=http://sonarqube:9000 \
-                      -Dsonar.token=squ_4e8fc8fdbd46457acc13275a8cfcfed5eeda229a \
-                      -Dsonar.sourceEncoding=UTF-8
-                '''
+                withSonarQubeEnv('sonarqube-server') {
+                    sh '''
+                        sonar-scanner \
+                          -Dsonar.projectKey=atlas-ai \
+                          -Dsonar.sources=src/ \
+                          -Dsonar.host.url=http://sonarqube:9000 \
+                          -Dsonar.login=$SONAR_TOKEN \
+                          -Dsonar.sourceEncoding=UTF-8
+                    '''
+                }
             }
         }
         

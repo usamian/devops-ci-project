@@ -1,0 +1,1660 @@
+[
+  {
+    "user_input": "Is proof of salary needed when applying?",
+    "intent": "document_requirement",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "I have a job offer as a web developer in the UK paying £100,000/year. Do I qualify for a skilled worker visa?",
+    "intent": "eligibility_check",
+    "entities": {
+      "JOB_TITLE": "web developer",
+      "SOC_CODE": "2137",
+      "SALARY": 100000,
+      "COUNTRY": "Iran",
+      "AGE": 46,
+      "HAS_SPONSOR": true,
+      "ENGLISH": "test_passed"
+    },
+    "expected_rule_outcome": "eligible"
+  },
+  {
+    "user_input": "I want to work in the UK — what visa do I need?",
+    "intent": "general_query",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "I got a job offer as speech therapist at £35,000 annual salary in London. Can I get a visa?",
+    "intent": "eligibility_check",
+    "entities": {
+      "JOB_TITLE": "speech therapist",
+      "SOC_CODE": "2223",
+      "SALARY": 35000,
+      "COUNTRY": "Jamaica",
+      "AGE": 42,
+      "HAS_SPONSOR": true,
+      "ENGLISH": "native"
+    },
+    "expected_rule_outcome": "not_eligible"
+  },
+  {
+    "user_input": "Skilled worker visa eligibility check: civil engineer, £39,000/year, Kenya national, no CoS yet.",
+    "intent": "eligibility_check",
+    "entities": {
+      "JOB_TITLE": "civil engineer",
+      "SOC_CODE": "2121",
+      "SALARY": 39000,
+      "COUNTRY": "Kenya",
+      "AGE": 47,
+      "HAS_SPONSOR": false,
+      "ENGLISH": "test_passed"
+    },
+    "expected_rule_outcome": "not_eligible"
+  },
+  {
+    "user_input": "How long is the vignette valid for after visa approval?",
+    "intent": "processing_time",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "Do I need £1,270 in my bank account?",
+    "intent": "document_requirement",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "What is the processing time for a UK work visa?",
+    "intent": "processing_time",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "Can I travel to the UK before my visa decision?",
+    "intent": "processing_time",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "What proof do I need to provide for a Skilled Worker visa?",
+    "intent": "document_requirement",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "What happened to the Tier 2 visa?",
+    "intent": "general_query",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "Processing time estimate for skilled worker visa applied from Pakistan?",
+    "intent": "processing_time",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "What are the settlement requirements for a Skilled Worker visa holder?",
+    "intent": "general_query",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "What bank statements do I need for a UK work visa?",
+    "intent": "document_requirement",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "What proof do I need to provide for a Skilled Worker visa?",
+    "intent": "document_requirement",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "I have a job offer as a web developer in the UK paying £60,000/year. Do I qualify for a skilled worker visa?",
+    "intent": "eligibility_check",
+    "entities": {
+      "JOB_TITLE": "web developer",
+      "SOC_CODE": "2137",
+      "SALARY": 60000,
+      "COUNTRY": "Iran",
+      "AGE": 39,
+      "HAS_SPONSOR": true,
+      "ENGLISH": "test_passed"
+    },
+    "expected_rule_outcome": "eligible"
+  },
+  {
+    "user_input": "I am a doctor from Pakistan earning £35,000 a year. My employer will sponsor me. Am I eligible?",
+    "intent": "eligibility_check",
+    "entities": {
+      "JOB_TITLE": "doctor",
+      "SOC_CODE": "2211",
+      "SALARY": 35000,
+      "COUNTRY": "Pakistan",
+      "AGE": 50,
+      "HAS_SPONSOR": false,
+      "ENGLISH": "test_passed"
+    },
+    "expected_rule_outcome": "not_eligible"
+  },
+  {
+    "user_input": "Can I get my visa in 5 days?",
+    "intent": "processing_time",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "What are shortage occupations in the UK?",
+    "intent": "general_query",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "Do I meet the requirements for a skilled worker visa as a speech therapist earning £45,000?",
+    "intent": "eligibility_check",
+    "entities": {
+      "JOB_TITLE": "speech therapist",
+      "SOC_CODE": "2223",
+      "SALARY": 45000,
+      "COUNTRY": "Brazil",
+      "AGE": 44,
+      "HAS_SPONSOR": true,
+      "ENGLISH": "test_passed"
+    },
+    "expected_rule_outcome": "eligible"
+  },
+  {
+    "user_input": "I have a job offer as a pharmacist in the UK paying £35,000/year. Do I qualify for a skilled worker visa?",
+    "intent": "eligibility_check",
+    "entities": {
+      "JOB_TITLE": "pharmacist",
+      "SOC_CODE": "2213",
+      "SALARY": 35000,
+      "COUNTRY": "Sri Lanka",
+      "AGE": 36,
+      "HAS_SPONSOR": true,
+      "ENGLISH": "test_passed"
+    },
+    "expected_rule_outcome": "not_eligible"
+  },
+  {
+    "user_input": "Is a TB test required for the skilled worker visa?",
+    "intent": "document_requirement",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "I applied for a skilled worker visa — when will I get a decision?",
+    "intent": "processing_time",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "What is the Health and Care Worker visa?",
+    "intent": "general_query",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "What is priority service for UK visas?",
+    "intent": "processing_time",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "I'm applying from Nigeria — how long will the visa take?",
+    "intent": "processing_time",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "Can I use my IELTS score of 6.5 for the Skilled Worker visa?",
+    "intent": "document_requirement",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "What is the super priority service and how much does it cost?",
+    "intent": "processing_time",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "How long does a skilled worker visa take?",
+    "intent": "processing_time",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "Is there a visa for nurses to work in the UK?",
+    "intent": "general_query",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "Processing time estimate for skilled worker visa applied from Pakistan?",
+    "intent": "processing_time",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "I need to know what evidence to submit for my visa application.",
+    "intent": "document_requirement",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "Is a TB test required for the skilled worker visa?",
+    "intent": "document_requirement",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "What is a Skilled Worker visa?",
+    "intent": "general_query",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "What happens if I change jobs on a Skilled Worker visa?",
+    "intent": "general_query",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "How does the points-based immigration system work?",
+    "intent": "general_query",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "Can my family come with me on a Skilled Worker visa?",
+    "intent": "general_query",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "What questions can you answer about UK visas?",
+    "intent": "general_query",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "I have a UK degree. Do I still need to take an English test?",
+    "intent": "document_requirement",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "What is ILR and can I get it on a Skilled Worker visa?",
+    "intent": "general_query",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "What bank statements do I need for a UK work visa?",
+    "intent": "document_requirement",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "How long does in-country switching to a Skilled Worker visa take?",
+    "intent": "processing_time",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "Is there a way to speed up my visa application?",
+    "intent": "processing_time",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "I have a job offer as a it project manager in the UK paying £70,000/year. Do I qualify for a skilled worker visa?",
+    "intent": "eligibility_check",
+    "entities": {
+      "JOB_TITLE": "it project manager",
+      "SOC_CODE": "2134",
+      "SALARY": 70000,
+      "COUNTRY": "Sri Lanka",
+      "AGE": 29,
+      "HAS_SPONSOR": true,
+      "ENGLISH": "test_passed"
+    },
+    "expected_rule_outcome": "eligible"
+  },
+  {
+    "user_input": "What is priority service for UK visas?",
+    "intent": "processing_time",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "What documents do I need for a Skilled Worker visa?",
+    "intent": "document_requirement",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "What is the Immigration Skills Charge?",
+    "intent": "general_query",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "Do I need an IELTS certificate for the visa?",
+    "intent": "document_requirement",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "What is priority service for UK visas?",
+    "intent": "processing_time",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "I need my visa urgently — what options do I have?",
+    "intent": "processing_time",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "I'm applying from Nigeria — how long will the visa take?",
+    "intent": "processing_time",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "What visas are available for working in the UK?",
+    "intent": "general_query",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "Can a occupational therapist from Brazil earning £45,000 get a UK Skilled Worker Visa?",
+    "intent": "eligibility_check",
+    "entities": {
+      "JOB_TITLE": "occupational therapist",
+      "SOC_CODE": "2222",
+      "SALARY": 45000,
+      "COUNTRY": "Brazil",
+      "AGE": 41,
+      "HAS_SPONSOR": false,
+      "ENGLISH": "test_passed"
+    },
+    "expected_rule_outcome": "not_eligible"
+  },
+  {
+    "user_input": "I want to work in the UK — what visa do I need?",
+    "intent": "general_query",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "I'm 39 years old, a electrical engineer from India with a salary of £50,000. Will I get a skilled worker visa?",
+    "intent": "eligibility_check",
+    "entities": {
+      "JOB_TITLE": "electrical engineer",
+      "SOC_CODE": "2123",
+      "SALARY": 50000,
+      "COUNTRY": "India",
+      "AGE": 39,
+      "HAS_SPONSOR": true,
+      "ENGLISH": "test_passed"
+    },
+    "expected_rule_outcome": "eligible"
+  },
+  {
+    "user_input": "I applied for a skilled worker visa — when will I get a decision?",
+    "intent": "processing_time",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "Can I travel to the UK before my visa decision?",
+    "intent": "processing_time",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "I have a job offer as a paramedic in the UK paying £45,000/year. Do I qualify for a skilled worker visa?",
+    "intent": "eligibility_check",
+    "entities": {
+      "JOB_TITLE": "paramedic",
+      "SOC_CODE": "2231",
+      "SALARY": 45000,
+      "COUNTRY": "Ukraine",
+      "AGE": 31,
+      "HAS_SPONSOR": true,
+      "ENGLISH": "test_passed"
+    },
+    "expected_rule_outcome": "eligible"
+  },
+  {
+    "user_input": "Is a TB test required for the skilled worker visa?",
+    "intent": "document_requirement",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "My employer said I need a CoS — what is that?",
+    "intent": "document_requirement",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "I'm 36 years old, a management consultant from Ukraine with a salary of £39,000. Will I get a skilled worker visa?",
+    "intent": "eligibility_check",
+    "entities": {
+      "JOB_TITLE": "management consultant",
+      "SOC_CODE": "2422",
+      "SALARY": 39000,
+      "COUNTRY": "Ukraine",
+      "AGE": 36,
+      "HAS_SPONSOR": false,
+      "ENGLISH": "test_passed"
+    },
+    "expected_rule_outcome": "not_eligible"
+  },
+  {
+    "user_input": "I'm 29 years old, a it project manager from Iran with a salary of £32,000. Will I get a skilled worker visa?",
+    "intent": "eligibility_check",
+    "entities": {
+      "JOB_TITLE": "it project manager",
+      "SOC_CODE": "2134",
+      "SALARY": 32000,
+      "COUNTRY": "Iran",
+      "AGE": 29,
+      "HAS_SPONSOR": true,
+      "ENGLISH": "test_passed"
+    },
+    "expected_rule_outcome": "not_eligible"
+  },
+  {
+    "user_input": "I'm applying from Nigeria — how long will the visa take?",
+    "intent": "processing_time",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "What questions can you answer about UK visas?",
+    "intent": "general_query",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "Can I use my IELTS score of 6.5 for the Skilled Worker visa?",
+    "intent": "document_requirement",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "Can a management consultant from Nigeria earning £55,000 get a UK Skilled Worker Visa?",
+    "intent": "eligibility_check",
+    "entities": {
+      "JOB_TITLE": "management consultant",
+      "SOC_CODE": "2422",
+      "SALARY": 55000,
+      "COUNTRY": "Nigeria",
+      "AGE": 30,
+      "HAS_SPONSOR": true,
+      "ENGLISH": "test_passed"
+    },
+    "expected_rule_outcome": "eligible"
+  },
+  {
+    "user_input": "I need to know what evidence to submit for my visa application.",
+    "intent": "document_requirement",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "What bank statements do I need for a UK work visa?",
+    "intent": "document_requirement",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "Is proof of salary needed when applying?",
+    "intent": "document_requirement",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "What is a sponsor licence and how does a company get one?",
+    "intent": "general_query",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "Can I apply for a skilled worker visa? I work as a software engineer, salary £32,000, based in Turkey.",
+    "intent": "eligibility_check",
+    "entities": {
+      "JOB_TITLE": "software engineer",
+      "SOC_CODE": "2136",
+      "SALARY": 32000,
+      "COUNTRY": "Turkey",
+      "AGE": 27,
+      "HAS_SPONSOR": true,
+      "ENGLISH": "test_passed"
+    },
+    "expected_rule_outcome": "not_eligible"
+  },
+  {
+    "user_input": "Can you list the documents needed to apply for a skilled worker visa?",
+    "intent": "document_requirement",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "How many weeks does it take to get a decision on my visa?",
+    "intent": "processing_time",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "What is ILR and can I get it on a Skilled Worker visa?",
+    "intent": "general_query",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "What does 'certified maintenance' on the CoS mean?",
+    "intent": "document_requirement",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "Do I need £1,270 in my bank account?",
+    "intent": "document_requirement",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "Can I get British citizenship after a Skilled Worker visa?",
+    "intent": "general_query",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "Checking if I qualify: mechanical engineer role, salary £55,000, I'm from Canada and 53 years old.",
+    "intent": "eligibility_check",
+    "entities": {
+      "JOB_TITLE": "mechanical engineer",
+      "SOC_CODE": "2122",
+      "SALARY": 55000,
+      "COUNTRY": "Canada",
+      "AGE": 53,
+      "HAS_SPONSOR": true,
+      "ENGLISH": "native"
+    },
+    "expected_rule_outcome": "eligible"
+  },
+  {
+    "user_input": "Is it hard to get a UK work visa?",
+    "intent": "general_query",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "What is a Certificate of Sponsorship and how do I get one?",
+    "intent": "document_requirement",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "How do I prove my qualifications for a Skilled Worker visa?",
+    "intent": "document_requirement",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "Tell me about UK immigration",
+    "intent": "general_query",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "What happens if my visa is taking longer than expected?",
+    "intent": "processing_time",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "My employer is sponsoring me for a paramedic role at £60,000 per annum. I'm from Pakistan. Am I eligible?",
+    "intent": "eligibility_check",
+    "entities": {
+      "JOB_TITLE": "paramedic",
+      "SOC_CODE": "2231",
+      "SALARY": 60000,
+      "COUNTRY": "Pakistan",
+      "AGE": 30,
+      "HAS_SPONSOR": false,
+      "ENGLISH": "test_passed"
+    },
+    "expected_rule_outcome": "not_eligible"
+  },
+  {
+    "user_input": "I need to know what evidence to submit for my visa application.",
+    "intent": "document_requirement",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "Can a electronics engineer from Canada earning £32,000 get a UK Skilled Worker Visa?",
+    "intent": "eligibility_check",
+    "entities": {
+      "JOB_TITLE": "electronics engineer",
+      "SOC_CODE": "2124",
+      "SALARY": 32000,
+      "COUNTRY": "Canada",
+      "AGE": 42,
+      "HAS_SPONSOR": true,
+      "ENGLISH": "native"
+    },
+    "expected_rule_outcome": "not_eligible"
+  },
+  {
+    "user_input": "My employer said I need a CoS — what is that?",
+    "intent": "document_requirement",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "What is the Immigration Skills Charge?",
+    "intent": "general_query",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "What bank statements do I need for a UK work visa?",
+    "intent": "document_requirement",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "I am a psychologist from Canada earning £100,000 a year. My employer will sponsor me. Am I eligible?",
+    "intent": "eligibility_check",
+    "entities": {
+      "JOB_TITLE": "psychologist",
+      "SOC_CODE": "2212",
+      "SALARY": 100000,
+      "COUNTRY": "Canada",
+      "AGE": 52,
+      "HAS_SPONSOR": true,
+      "ENGLISH": "native"
+    },
+    "expected_rule_outcome": "eligible"
+  },
+  {
+    "user_input": "What financial documents do I need to show for a Skilled Worker visa?",
+    "intent": "document_requirement",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "What financial documents do I need to show for a Skilled Worker visa?",
+    "intent": "document_requirement",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "What happens if my visa is taking longer than expected?",
+    "intent": "processing_time",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "Can I apply for a skilled worker visa? I work as a speech therapist, salary £35,000, based in Brazil.",
+    "intent": "eligibility_check",
+    "entities": {
+      "JOB_TITLE": "speech therapist",
+      "SOC_CODE": "2223",
+      "SALARY": 35000,
+      "COUNTRY": "Brazil",
+      "AGE": 27,
+      "HAS_SPONSOR": true,
+      "ENGLISH": "test_passed"
+    },
+    "expected_rule_outcome": "not_eligible"
+  },
+  {
+    "user_input": "Can a speech therapist from Turkey earning £50,000 get a UK Skilled Worker Visa?",
+    "intent": "eligibility_check",
+    "entities": {
+      "JOB_TITLE": "speech therapist",
+      "SOC_CODE": "2223",
+      "SALARY": 50000,
+      "COUNTRY": "Turkey",
+      "AGE": 27,
+      "HAS_SPONSOR": true,
+      "ENGLISH": "test_passed"
+    },
+    "expected_rule_outcome": "eligible"
+  },
+  {
+    "user_input": "Do I pay the Immigration Health Surcharge on a Health and Care visa?",
+    "intent": "general_query",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "I need to know what evidence to submit for my visa application.",
+    "intent": "document_requirement",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "Can my family come with me on a Skilled Worker visa?",
+    "intent": "general_query",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "What paperwork is required for a UK work visa?",
+    "intent": "document_requirement",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "How much does a skilled worker visa cost?",
+    "intent": "general_query",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "Do I need to provide a degree certificate for the skilled worker visa?",
+    "intent": "document_requirement",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "Can I apply for a skilled worker visa? I work as a electrical engineer, salary £39,000, based in Jamaica.",
+    "intent": "eligibility_check",
+    "entities": {
+      "JOB_TITLE": "electrical engineer",
+      "SOC_CODE": "2123",
+      "SALARY": 39000,
+      "COUNTRY": "Jamaica",
+      "AGE": 51,
+      "HAS_SPONSOR": true,
+      "ENGLISH": "native"
+    },
+    "expected_rule_outcome": "not_eligible"
+  },
+  {
+    "user_input": "How does the points-based immigration system work?",
+    "intent": "general_query",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "How long does in-country switching to a Skilled Worker visa take?",
+    "intent": "processing_time",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "Do I meet the requirements for a skilled worker visa as a speech therapist earning £38,000?",
+    "intent": "eligibility_check",
+    "entities": {
+      "JOB_TITLE": "speech therapist",
+      "SOC_CODE": "2223",
+      "SALARY": 38000,
+      "COUNTRY": "Turkey",
+      "AGE": 26,
+      "HAS_SPONSOR": true,
+      "ENGLISH": "test_passed"
+    },
+    "expected_rule_outcome": "not_eligible"
+  },
+  {
+    "user_input": "I am a pharmacist from Turkey earning £40,000 a year. My employer will sponsor me. Am I eligible?",
+    "intent": "eligibility_check",
+    "entities": {
+      "JOB_TITLE": "pharmacist",
+      "SOC_CODE": "2213",
+      "SALARY": 40000,
+      "COUNTRY": "Turkey",
+      "AGE": 46,
+      "HAS_SPONSOR": false,
+      "ENGLISH": "test_passed"
+    },
+    "expected_rule_outcome": "not_eligible"
+  },
+  {
+    "user_input": "How soon can I start working after getting my skilled worker visa?",
+    "intent": "processing_time",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "Can I extend my Skilled Worker visa?",
+    "intent": "general_query",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "Can I get my visa in 5 days?",
+    "intent": "processing_time",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "How much does a skilled worker visa cost?",
+    "intent": "general_query",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "What is the going rate for a software engineer in the UK?",
+    "intent": "general_query",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "I got a job offer as civil engineer at £55,000 annual salary in London. Can I get a visa?",
+    "intent": "eligibility_check",
+    "entities": {
+      "JOB_TITLE": "civil engineer",
+      "SOC_CODE": "2121",
+      "SALARY": 55000,
+      "COUNTRY": "Bangladesh",
+      "AGE": 32,
+      "HAS_SPONSOR": false,
+      "ENGLISH": "test_passed"
+    },
+    "expected_rule_outcome": "not_eligible"
+  },
+  {
+    "user_input": "What proof do I need to provide for a Skilled Worker visa?",
+    "intent": "document_requirement",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "How long does a skilled worker visa take?",
+    "intent": "processing_time",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "Is the 3-week processing time guaranteed?",
+    "intent": "processing_time",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "What happens if my visa is taking longer than expected?",
+    "intent": "processing_time",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "What proof do I need to provide for a Skilled Worker visa?",
+    "intent": "document_requirement",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "Can you list the documents needed to apply for a skilled worker visa?",
+    "intent": "document_requirement",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "Can I apply for a skilled worker visa? I work as a software engineer, salary £70,000, based in Iran.",
+    "intent": "eligibility_check",
+    "entities": {
+      "JOB_TITLE": "software engineer",
+      "SOC_CODE": "2136",
+      "SALARY": 70000,
+      "COUNTRY": "Iran",
+      "AGE": 45,
+      "HAS_SPONSOR": true,
+      "ENGLISH": "test_passed"
+    },
+    "expected_rule_outcome": "eligible"
+  },
+  {
+    "user_input": "Processing time estimate for skilled worker visa applied from Pakistan?",
+    "intent": "processing_time",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "Is there a way to speed up my visa application?",
+    "intent": "processing_time",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "What is a Certificate of Sponsorship and how do I get one?",
+    "intent": "document_requirement",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "I got a job offer as electrical engineer at £50,000 annual salary in London. Can I get a visa?",
+    "intent": "eligibility_check",
+    "entities": {
+      "JOB_TITLE": "electrical engineer",
+      "SOC_CODE": "2123",
+      "SALARY": 50000,
+      "COUNTRY": "Colombia",
+      "AGE": 46,
+      "HAS_SPONSOR": true,
+      "ENGLISH": "test_passed"
+    },
+    "expected_rule_outcome": "eligible"
+  },
+  {
+    "user_input": "How long does in-country switching to a Skilled Worker visa take?",
+    "intent": "processing_time",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "How long does it take to process a skilled worker visa from India?",
+    "intent": "processing_time",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "How long does a skilled worker visa take?",
+    "intent": "processing_time",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "How many weeks does it take to get a decision on my visa?",
+    "intent": "processing_time",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "I applied for a skilled worker visa — when will I get a decision?",
+    "intent": "processing_time",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "What financial documents do I need to show for a Skilled Worker visa?",
+    "intent": "document_requirement",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "What is the Immigration Health Surcharge?",
+    "intent": "general_query",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "How long does in-country switching to a Skilled Worker visa take?",
+    "intent": "processing_time",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "What is a Skilled Worker visa?",
+    "intent": "general_query",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "What does RQF level 3 mean for visa purposes?",
+    "intent": "general_query",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "I have a job offer as a lab technician in the UK paying £38,000/year. Do I qualify for a skilled worker visa?",
+    "intent": "eligibility_check",
+    "entities": {
+      "JOB_TITLE": "lab technician",
+      "SOC_CODE": "3111",
+      "SALARY": 38000,
+      "COUNTRY": "Colombia",
+      "AGE": 37,
+      "HAS_SPONSOR": true,
+      "ENGLISH": "test_passed"
+    },
+    "expected_rule_outcome": "not_eligible"
+  },
+  {
+    "user_input": "How long is the vignette valid for after visa approval?",
+    "intent": "processing_time",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "What is the super priority service and how much does it cost?",
+    "intent": "processing_time",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "What is the super priority service and how much does it cost?",
+    "intent": "processing_time",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "How long does it take to process a skilled worker visa from India?",
+    "intent": "processing_time",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "What is priority service for UK visas?",
+    "intent": "processing_time",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "I'm applying from Nigeria — how long will the visa take?",
+    "intent": "processing_time",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "How long does a skilled worker visa take?",
+    "intent": "processing_time",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "How much does a skilled worker visa cost?",
+    "intent": "general_query",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "Can I get my visa in 5 days?",
+    "intent": "processing_time",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "Skilled worker visa eligibility check: electronics engineer, £38,700/year, China national, no CoS yet.",
+    "intent": "eligibility_check",
+    "entities": {
+      "JOB_TITLE": "electronics engineer",
+      "SOC_CODE": "2124",
+      "SALARY": 38700,
+      "COUNTRY": "China",
+      "AGE": 39,
+      "HAS_SPONSOR": false,
+      "ENGLISH": "test_passed"
+    },
+    "expected_rule_outcome": "not_eligible"
+  },
+  {
+    "user_input": "Is a TB test required for the skilled worker visa?",
+    "intent": "document_requirement",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "What is priority service for UK visas?",
+    "intent": "processing_time",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "What happens if I change jobs on a Skilled Worker visa?",
+    "intent": "general_query",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "Checking if I qualify: architect role, salary £32,000, I'm from Turkey and 45 years old.",
+    "intent": "eligibility_check",
+    "entities": {
+      "JOB_TITLE": "architect",
+      "SOC_CODE": "2426",
+      "SALARY": 32000,
+      "COUNTRY": "Turkey",
+      "AGE": 45,
+      "HAS_SPONSOR": true,
+      "ENGLISH": "test_passed"
+    },
+    "expected_rule_outcome": "not_eligible"
+  },
+  {
+    "user_input": "Skilled worker visa eligibility check: architect, £80,000/year, Canada national, has CoS.",
+    "intent": "eligibility_check",
+    "entities": {
+      "JOB_TITLE": "architect",
+      "SOC_CODE": "2426",
+      "SALARY": 80000,
+      "COUNTRY": "Canada",
+      "AGE": 46,
+      "HAS_SPONSOR": true,
+      "ENGLISH": "native"
+    },
+    "expected_rule_outcome": "eligible"
+  },
+  {
+    "user_input": "What is ILR and can I get it on a Skilled Worker visa?",
+    "intent": "general_query",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "Can I extend my Skilled Worker visa?",
+    "intent": "general_query",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "I have a job offer as a speech therapist in the UK paying £32,000/year. Do I qualify for a skilled worker visa?",
+    "intent": "eligibility_check",
+    "entities": {
+      "JOB_TITLE": "speech therapist",
+      "SOC_CODE": "2223",
+      "SALARY": 32000,
+      "COUNTRY": "Colombia",
+      "AGE": 48,
+      "HAS_SPONSOR": true,
+      "ENGLISH": "test_passed"
+    },
+    "expected_rule_outcome": "not_eligible"
+  },
+  {
+    "user_input": "What is a Skilled Worker visa?",
+    "intent": "general_query",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "Is the NHS hiring nurses from abroad?",
+    "intent": "general_query",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "What is a Certificate of Sponsorship and how do I get one?",
+    "intent": "document_requirement",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "My employer is sponsoring me for a civil engineer role at £40,000 per annum. I'm from Iran. Am I eligible?",
+    "intent": "eligibility_check",
+    "entities": {
+      "JOB_TITLE": "civil engineer",
+      "SOC_CODE": "2121",
+      "SALARY": 40000,
+      "COUNTRY": "Iran",
+      "AGE": 33,
+      "HAS_SPONSOR": true,
+      "ENGLISH": "test_passed"
+    },
+    "expected_rule_outcome": "not_eligible"
+  },
+  {
+    "user_input": "What happens if my visa is taking longer than expected?",
+    "intent": "processing_time",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "Processing time estimate for skilled worker visa applied from Pakistan?",
+    "intent": "processing_time",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "How do I prove my qualifications for a Skilled Worker visa?",
+    "intent": "document_requirement",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "Atlas AI what can you help me with?",
+    "intent": "general_query",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "What is ILR and can I get it on a Skilled Worker visa?",
+    "intent": "general_query",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "What is the going rate for a software engineer in the UK?",
+    "intent": "general_query",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "I have a job offer as a chemical scientist in the UK paying £30,000/year. Do I qualify for a skilled worker visa?",
+    "intent": "eligibility_check",
+    "entities": {
+      "JOB_TITLE": "chemical scientist",
+      "SOC_CODE": "2111",
+      "SALARY": 30000,
+      "COUNTRY": "Ireland",
+      "AGE": 38,
+      "HAS_SPONSOR": false,
+      "ENGLISH": "native"
+    },
+    "expected_rule_outcome": "not_eligible"
+  },
+  {
+    "user_input": "Is a TB test required for the skilled worker visa?",
+    "intent": "document_requirement",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "I am a management consultant from USA earning £45,000 a year. My employer will sponsor me. Am I eligible?",
+    "intent": "eligibility_check",
+    "entities": {
+      "JOB_TITLE": "management consultant",
+      "SOC_CODE": "2422",
+      "SALARY": 45000,
+      "COUNTRY": "USA",
+      "AGE": 41,
+      "HAS_SPONSOR": true,
+      "ENGLISH": "native"
+    },
+    "expected_rule_outcome": "not_eligible"
+  },
+  {
+    "user_input": "Do I need to provide a degree certificate for the skilled worker visa?",
+    "intent": "document_requirement",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "I'm 52 years old, a accountant from Bangladesh with a salary of £100,000. Will I get a skilled worker visa?",
+    "intent": "eligibility_check",
+    "entities": {
+      "JOB_TITLE": "accountant",
+      "SOC_CODE": "2421",
+      "SALARY": 100000,
+      "COUNTRY": "Bangladesh",
+      "AGE": 52,
+      "HAS_SPONSOR": true,
+      "ENGLISH": "test_passed"
+    },
+    "expected_rule_outcome": "eligible"
+  },
+  {
+    "user_input": "Is proof of salary needed when applying?",
+    "intent": "document_requirement",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "What are shortage occupations in the UK?",
+    "intent": "general_query",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "How does the points-based immigration system work?",
+    "intent": "general_query",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "What are the settlement requirements for a Skilled Worker visa holder?",
+    "intent": "general_query",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "Is there a way to speed up my visa application?",
+    "intent": "processing_time",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "What is ILR and can I get it on a Skilled Worker visa?",
+    "intent": "general_query",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "What visas are available for working in the UK?",
+    "intent": "general_query",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "Do I pay the Immigration Health Surcharge on a Health and Care visa?",
+    "intent": "general_query",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "Skilled worker visa eligibility check: solicitor, £60,000/year, Colombia national, has CoS.",
+    "intent": "eligibility_check",
+    "entities": {
+      "JOB_TITLE": "solicitor",
+      "SOC_CODE": "2411",
+      "SALARY": 60000,
+      "COUNTRY": "Colombia",
+      "AGE": 27,
+      "HAS_SPONSOR": true,
+      "ENGLISH": "test_passed"
+    },
+    "expected_rule_outcome": "eligible"
+  },
+  {
+    "user_input": "What bank statements do I need for a UK work visa?",
+    "intent": "document_requirement",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "Can I get my visa in 5 days?",
+    "intent": "processing_time",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "When should I apply for my skilled worker visa before my start date?",
+    "intent": "processing_time",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "I got a job offer as pharmacist at £39,000 annual salary in London. Can I get a visa?",
+    "intent": "eligibility_check",
+    "entities": {
+      "JOB_TITLE": "pharmacist",
+      "SOC_CODE": "2213",
+      "SALARY": 39000,
+      "COUNTRY": "Bangladesh",
+      "AGE": 53,
+      "HAS_SPONSOR": false,
+      "ENGLISH": "test_passed"
+    },
+    "expected_rule_outcome": "not_eligible"
+  },
+  {
+    "user_input": "Can I get my visa in 5 days?",
+    "intent": "processing_time",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "Hello, I need help with UK visa information",
+    "intent": "general_query",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "How many weeks does it take to get a decision on my visa?",
+    "intent": "processing_time",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "How long is the vignette valid for after visa approval?",
+    "intent": "processing_time",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "What is a Certificate of Sponsorship and how do I get one?",
+    "intent": "document_requirement",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "What paperwork is required for a UK work visa?",
+    "intent": "document_requirement",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "I'm 26 years old, a it specialist manager from Colombia with a salary of £45,000. Will I get a skilled worker visa?",
+    "intent": "eligibility_check",
+    "entities": {
+      "JOB_TITLE": "it specialist manager",
+      "SOC_CODE": "2133",
+      "SALARY": 45000,
+      "COUNTRY": "Colombia",
+      "AGE": 26,
+      "HAS_SPONSOR": false,
+      "ENGLISH": "test_passed"
+    },
+    "expected_rule_outcome": "not_eligible"
+  },
+  {
+    "user_input": "I got a job offer as electronics engineer at £30,000 annual salary in London. Can I get a visa?",
+    "intent": "eligibility_check",
+    "entities": {
+      "JOB_TITLE": "electronics engineer",
+      "SOC_CODE": "2124",
+      "SALARY": 30000,
+      "COUNTRY": "Philippines",
+      "AGE": 50,
+      "HAS_SPONSOR": false,
+      "ENGLISH": "test_passed"
+    },
+    "expected_rule_outcome": "not_eligible"
+  },
+  {
+    "user_input": "I'm 45 years old, a psychologist from Colombia with a salary of £80,000. Will I get a skilled worker visa?",
+    "intent": "eligibility_check",
+    "entities": {
+      "JOB_TITLE": "psychologist",
+      "SOC_CODE": "2212",
+      "SALARY": 80000,
+      "COUNTRY": "Colombia",
+      "AGE": 45,
+      "HAS_SPONSOR": true,
+      "ENGLISH": "test_passed"
+    },
+    "expected_rule_outcome": "eligible"
+  },
+  {
+    "user_input": "I got a job offer as accountant at £70,000 annual salary in London. Can I get a visa?",
+    "intent": "eligibility_check",
+    "entities": {
+      "JOB_TITLE": "accountant",
+      "SOC_CODE": "2421",
+      "SALARY": 70000,
+      "COUNTRY": "Ukraine",
+      "AGE": 54,
+      "HAS_SPONSOR": true,
+      "ENGLISH": "test_passed"
+    },
+    "expected_rule_outcome": "eligible"
+  },
+  {
+    "user_input": "Is the NHS hiring nurses from abroad?",
+    "intent": "general_query",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "Can I get my visa in 5 days?",
+    "intent": "processing_time",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "What is priority service for UK visas?",
+    "intent": "processing_time",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "I applied for a skilled worker visa — when will I get a decision?",
+    "intent": "processing_time",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "Can I apply for a skilled worker visa? I work as a university lecturer, salary £70,000, based in Ireland.",
+    "intent": "eligibility_check",
+    "entities": {
+      "JOB_TITLE": "university lecturer",
+      "SOC_CODE": "2311",
+      "SALARY": 70000,
+      "COUNTRY": "Ireland",
+      "AGE": 34,
+      "HAS_SPONSOR": true,
+      "ENGLISH": "native"
+    },
+    "expected_rule_outcome": "eligible"
+  },
+  {
+    "user_input": "What financial documents do I need to show for a Skilled Worker visa?",
+    "intent": "document_requirement",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "Can a paramedic from Ghana earning £39,000 get a UK Skilled Worker Visa?",
+    "intent": "eligibility_check",
+    "entities": {
+      "JOB_TITLE": "paramedic",
+      "SOC_CODE": "2231",
+      "SALARY": 39000,
+      "COUNTRY": "Ghana",
+      "AGE": 40,
+      "HAS_SPONSOR": true,
+      "ENGLISH": "test_passed"
+    },
+    "expected_rule_outcome": "eligible"
+  },
+  {
+    "user_input": "I'm 51 years old, a electrical engineer from Ghana with a salary of £100,000. Will I get a skilled worker visa?",
+    "intent": "eligibility_check",
+    "entities": {
+      "JOB_TITLE": "electrical engineer",
+      "SOC_CODE": "2123",
+      "SALARY": 100000,
+      "COUNTRY": "Ghana",
+      "AGE": 51,
+      "HAS_SPONSOR": true,
+      "ENGLISH": "test_passed"
+    },
+    "expected_rule_outcome": "eligible"
+  },
+  {
+    "user_input": "I want to work in the UK — what visa do I need?",
+    "intent": "general_query",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "How long does it take to process a skilled worker visa from India?",
+    "intent": "processing_time",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "I applied for a skilled worker visa — when will I get a decision?",
+    "intent": "processing_time",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "Is the NHS hiring nurses from abroad?",
+    "intent": "general_query",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "What proof do I need to provide for a Skilled Worker visa?",
+    "intent": "document_requirement",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "What English language tests are accepted for a Skilled Worker visa?",
+    "intent": "document_requirement",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "Do I meet the requirements for a skilled worker visa as a teacher earning £38,000?",
+    "intent": "eligibility_check",
+    "entities": {
+      "JOB_TITLE": "teacher",
+      "SOC_CODE": "2314",
+      "SALARY": 38000,
+      "COUNTRY": "Kenya",
+      "AGE": 25,
+      "HAS_SPONSOR": true,
+      "ENGLISH": "test_passed"
+    },
+    "expected_rule_outcome": "not_eligible"
+  },
+  {
+    "user_input": "Can a accountant from Australia earning £39,000 get a UK Skilled Worker Visa?",
+    "intent": "eligibility_check",
+    "entities": {
+      "JOB_TITLE": "accountant",
+      "SOC_CODE": "2421",
+      "SALARY": 39000,
+      "COUNTRY": "Australia",
+      "AGE": 34,
+      "HAS_SPONSOR": true,
+      "ENGLISH": "native"
+    },
+    "expected_rule_outcome": "not_eligible"
+  },
+  {
+    "user_input": "What is a Skilled Worker visa?",
+    "intent": "general_query",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "Can a financial analyst from Philippines earning £35,000 get a UK Skilled Worker Visa?",
+    "intent": "eligibility_check",
+    "entities": {
+      "JOB_TITLE": "financial analyst",
+      "SOC_CODE": "3539",
+      "SALARY": 35000,
+      "COUNTRY": "Philippines",
+      "AGE": 32,
+      "HAS_SPONSOR": false,
+      "ENGLISH": "test_passed"
+    },
+    "expected_rule_outcome": "not_eligible"
+  },
+  {
+    "user_input": "My employer said I need a CoS — what is that?",
+    "intent": "document_requirement",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "Tell me about UK immigration",
+    "intent": "general_query",
+    "entities": {},
+    "expected_rule_outcome": null
+  },
+  {
+    "user_input": "Do I meet the requirements for a skilled worker visa as a solicitor earning £60,000?",
+    "intent": "eligibility_check",
+    "entities": {
+      "JOB_TITLE": "solicitor",
+      "SOC_CODE": "2411",
+      "SALARY": 60000,
+      "COUNTRY": "China",
+      "AGE": 24,
+      "HAS_SPONSOR": false,
+      "ENGLISH": "test_passed"
+    },
+    "expected_rule_outcome": "not_eligible"
+  }
+]

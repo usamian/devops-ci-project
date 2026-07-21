@@ -1,0 +1,98 @@
+{
+  "_metadata": {
+    "visa_type": "Family Visa (Spouse/Partner)",
+    "source": "GOV.UK Family visa guidance",
+    "url": "https://www.gov.uk/uk-family-visa",
+    "last_updated": "2024-04-04",
+    "notes": "This visa is for individuals who want to join or stay with family members who are settled in the UK (spouse, partner, parent, or child)."
+  },
+  "rules": {
+    "relationship": {
+      "rule_id": "FV-001",
+      "description": "Must be married to or in a genuine subsisting relationship with a UK settled person",
+      "requirement": "mandatory",
+      "source_url": "https://www.gov.uk/uk-family-visa/eligibility",
+      "source_section": "Relationship requirements",
+      "details": "You must be married to, in a civil partnership with, or have been living together with your partner for at least 2 years."
+    },
+    "sponsor_status": {
+      "rule_id": "FV-002",
+      "description": "Sponsor must be a British citizen, settled person, or have refugee/humanitarian protection",
+      "requirement": "mandatory",
+      "source_url": "https://www.gov.uk/uk-family-visa/eligibility",
+      "source_section": "Sponsor eligibility",
+      "details": "Your partner must be a British citizen, have ILR/EU Settled Status, or have refugee/humanitarian protection."
+    },
+    "financial": {
+      "rule_id": "FV-003",
+      "description": "Must meet minimum income requirement (£18,600 annually, higher with children)",
+      "requirement": "mandatory",
+      "source_url": "https://www.gov.uk/uk-family-visa/financial-requirements",
+      "source_section": "Financial requirement",
+      "minimum_income": 18600,
+      "minimum_income_with_one_child": 22400,
+      "additional_child": 2400,
+      "details": "Your sponsor (or combined income) must be at least £18,600/year, or £22,400/year with one child, plus £2,400 for each additional child."
+    },
+    "accommodation": {
+      "rule_id": "FV-004",
+      "description": "Must have adequate accommodation without recourse to public funds",
+      "requirement": "mandatory",
+      "source_url": "https://www.gov.uk/uk-family-visa/eligibility",
+      "source_section": "Accommodation requirement",
+      "details": "You must have adequate accommodation that is owned or occupied exclusively by your family and does not contravene overcrowding rules."
+    },
+    "english_language": {
+      "rule_id": "FV-005",
+      "description": "Must meet English language requirement at CEFR A1 (initial) / A2 (extension)",
+      "requirement": "mandatory",
+      "source_url": "https://www.gov.uk/uk-family-visa/knowledge-of-english",
+      "source_section": "English language requirement",
+      "initial_level": "A1",
+      "extension_level": "A2",
+      "settlement_level": "B1",
+      "details": "You must demonstrate English language proficiency at CEFR A1 level for initial application, A2 for extension, and B1 for settlement."
+    },
+    "genuine_relationship": {
+      "rule_id": "FV-006",
+      "description": "Must intend to live together permanently in the UK",
+      "requirement": "mandatory",
+      "source_url": "https://www.gov.uk/uk-family-visa/eligibility",
+      "source_section": "Genuine relationship",
+      "details": "You and your partner must intend to live together permanently in the UK."
+    }
+  },
+  "financial_calculations": {
+    "cash_savings_threshold": 16000,
+    "savings_multiplier": 2.5,
+    "description": "Cash savings above £16,000 held for 6 months can be used to meet the financial requirement. Savings are divided by 2.5 to calculate annual income equivalent."
+  },
+  "english_exemptions": {
+    "age_exemptions": {
+      "under_18": "Applicants under 18 are exempt",
+      "over_65": "Applicants aged 65 or over are exempt"
+    },
+    "disability_exemption": "Applicants with a physical or mental condition that prevents them from meeting the requirement",
+    "country_exemptions": [
+      "Antigua and Barbuda", "Australia", "Bahamas", "Barbados", "Belize",
+      "Canada", "Dominica", "Grenada", "Guyana", "Jamaica", "Malta",
+      "New Zealand", "St Kitts and Nevis", "St Lucia", "St Vincent and the Grenadines",
+      "Trinidad and Tobago", "United States of America"
+    ]
+  },
+  "settlement": {
+    "initial_visa_duration": "2.5 years",
+    "extension_duration": "2.5 years",
+    "path_to_ilr": "5 years",
+    "description": "After 5 years on a Family visa (2.5 years initial + 2.5 years extension), you may be eligible to apply for Indefinite Leave to Remain (ILR)."
+  },
+  "fees": {
+    "visa_application_from_outside_uk": 1846,
+    "visa_application_from_inside_uk": 1258,
+    "source_url": "https://www.gov.uk/uk-family-visa/apply",
+    "last_checked": "2024-04-04",
+    "immigration_health_surcharge_per_year": 1035,
+    "priority_service": 500,
+    "super_priority_service": 800
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "_metadata": {
+    "visa_type": "Global Talent Visa",
+    "source": "GOV.UK Global Talent visa guidance",
+    "url": "https://www.gov.uk/global-talent-visa",
+    "last_updated": "2024-04-04",
+    "notes": "This visa is for leaders or potential leaders in academia, research, digital technology, arts and culture, or other eligible fields."
+  },
+  "rules": {
+    "endorsement": {
+      "rule_id": "GT-001",
+      "description": "Applicant must have endorsement from a designated competent body",
+      "requirement": "mandatory",
+      "source_url": "https://www.gov.uk/global-talent-visa/eligibility",
+      "source_section": "Endorsement requirements",
+      "details": "You must obtain endorsement from a designated competent body before applying for the visa. The endorsing body depends on your field."
+    },
+    "eligible_field": {
+      "rule_id": "GT-002",
+      "description": "Applicant must work in an eligible field (academia, research, digital technology, arts)",
+      "requirement": "mandatory",
+      "source_url": "https://www.gov.uk/global-talent-visa/eligibility",
+      "source_section": "Eligible fields",
+      "details": "Your work must fall within one of the eligible fields: Academia/Research, Digital Technology, or Arts and Culture."
+    },
+    "exceptional_criteria": {
+      "rule_id": "GT-003",
+      "description": "Applicant must demonstrate exceptional talent or exceptional promise",
+      "requirement": "mandatory",
+      "source_url": "https://www.gov.uk/global-talent-visa/eligibility",
+      "source_section": "Talent and promise criteria",
+      "details": "You must demonstrate either exceptional promise (emerging leader) or exceptional talent (recognised world leader) in your field."
+    }
+  },
+  "eligible_fields": {
+    "academia_research": {
+      "name": "Academia or Research",
+      "bodies": ["Royal Society", "British Academy", "Royal Academy of Engineering", "UKRI"],
+      "categories": ["exceptional_promise", "exceptional_talent"],
+      "description": "For researchers, academics, and scientists working in universities, research institutions, or industry research."
+    },
+    "digital_technology": {
+      "name": "Digital Technology",
+      "bodies": ["Tech Nation"],
+      "categories": ["exceptional_promise", "exceptional_talent"],
+      "description": "For professionals working in software development, AI, cybersecurity, fintech, and other digital technology fields."
+    },
+    "arts_culture": {
+      "name": "Arts and Culture",
+      "bodies": ["Arts Council England"],
+      "categories": ["exceptional_promise", "exceptional_talent"],
+      "description": "For artists, musicians, writers, actors, directors, and other creative professionals."
+    }
+  },
+  "fees": {
+    "endorsement_application": 524,
+    "visa_application": {
+      "up_to_3_years": 716,
+      "over_3_years": 1406,
+      "source_url": "https://www.gov.uk/global-talent-visa/apply",
+      "last_checked": "2024-04-04"
+    },
+    "immigration_health_surcharge_per_year": 1035,
+    "priority_service": 500,
+    "super_priority_service": 800,
+    "note": "Endorsement application fee is separate from visa application fee"
+  },
+  "settlement": {
+    "path_to_ilr": "5 years",
+    "description": "Global Talent visa holders can apply for Indefinite Leave to Remain (ILR) after 5 years in the UK, or after 3 years if endorsed for exceptional talent."
+  }
+}

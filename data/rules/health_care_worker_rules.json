@@ -1,0 +1,86 @@
+{
+  "_metadata": {
+    "visa_type": "Health and Care Worker Visa",
+    "source": "GOV.UK Health and Care Worker visa guidance",
+    "url": "https://www.gov.uk/health-care-worker-visa",
+    "last_updated": "2024-04-04",
+    "notes": "This visa is for qualified doctors, nurses and health and care workers who want to work in the UK in an eligible job with the NHS, an NHS supplier, or in adult social care."
+  },
+  "rules": {
+    "sponsorship": {
+      "rule_id": "HC-001",
+      "description": "Applicant must have a valid Certificate of Sponsorship from an approved UK health or adult social care employer",
+      "requirement": "mandatory",
+      "source_url": "https://www.gov.uk/health-care-worker-visa/eligibility",
+      "source_section": "Health and Care Worker visa – Sponsorship",
+      "details": "The sponsor must be an NHS trust, NHS supplier, or registered adult social care provider with a valid Worker sponsor licence."
+    },
+    "eligible_occupation": {
+      "rule_id": "HC-002",
+      "description": "Job must be in an eligible health or adult social care occupation",
+      "requirement": "mandatory",
+      "source_url": "https://www.gov.uk/health-care-worker-visa/eligibility",
+      "source_section": "Eligible occupations",
+      "details": "The job must be in one of the eligible SOC codes for health and care workers."
+    },
+    "qualifications": {
+      "rule_id": "HC-003",
+      "description": "Applicant must have the required professional qualifications and registration",
+      "requirement": "mandatory",
+      "source_url": "https://www.gov.uk/health-care-worker-visa/eligibility",
+      "source_section": "Professional registration",
+      "details": "You must have the professional qualifications required for your role and may need to register with a UK professional body."
+    },
+    "english_language": {
+      "rule_id": "HC-004",
+      "description": "English language at B1 CEFR or above",
+      "requirement": "mandatory",
+      "source_url": "https://www.gov.uk/health-care-worker-visa/knowledge-of-english",
+      "source_section": "Appendix English Language",
+      "required_level": "B1",
+      "details": "You must demonstrate English language proficiency at CEFR level B1 or above."
+    },
+    "maintenance": {
+      "rule_id": "HC-005",
+      "description": "Financial maintenance requirement (£1,270 for 28 days, waivable)",
+      "requirement": "mandatory",
+      "source_url": "https://www.gov.uk/health-care-worker-visa/financial-requirements",
+      "source_section": "Appendix Finance",
+      "minimum_savings": 1270,
+      "savings_held_days": 28,
+      "details": "You must hold at least £1,270 in personal savings for 28 consecutive days, unless your sponsor certifies maintenance on your CoS."
+    }
+  },
+  "eligible_soc_codes": {
+    "2211": "Medical practitioners",
+    "2212": "Psychologists",
+    "2213": "Pharmacists",
+    "2214": "Ophthalmic opticians",
+    "2215": "Dental practitioners",
+    "2217": "Medical radiographers",
+    "2218": "Podiatrists",
+    "2219": "Health professionals n.e.c.",
+    "2221": "Physiotherapists",
+    "2222": "Occupational therapists",
+    "2223": "Speech and language therapists",
+    "2225": "Nurses",
+    "2229": "Therapy professionals n.e.c.",
+    "3211": "Nursing auxiliaries and assistants",
+    "3212": "Dental nurses",
+    "3213": "Pharmacy technicians",
+    "3214": "Medical and dental technicians",
+    "3215": "Phlebotomists",
+    "3216": "Ambulance staff",
+    "3219": "Health associate professionals n.e.c.",
+    "6145": "Care workers and home carers",
+    "6146": "Senior care workers"
+  },
+  "fees": {
+    "visa_application": 0,
+    "note": "No application fee for Health and Care Worker visa",
+    "immigration_health_surcharge": 0,
+    "ihs_note": "Exempt from Immigration Health Surcharge",
+    "priority_service": 500,
+    "super_priority_service": 800
+  }
+}

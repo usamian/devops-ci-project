@@ -1,0 +1,60 @@
+================================================================================
+  ATLAS AI - API KEY SETUP GUIDE
+  Quick setup for Groq API (no Ollama required)
+================================================================================
+
+STEP 1: GET YOUR FREE GROQ API KEY
+------------------------------------
+1. Go to: https://console.groq.com/keys
+2. Sign up or log in with your account
+3. Click "Create API Key"
+4. Copy your API key (starts with "gsk_")
+
+STEP 2: ADD API KEY TO CONFIG
+------------------------------
+1. Open the file: groq_config.py
+2. Find the line: GROQ_API_KEY = ""
+3. Paste your API key inside the quotes:
+   GROQ_API_KEY = "gsk_your-actual-api-key-here"
+4. Save the file
+
+STEP 3: RUN THE APPLICATION
+----------------------------
+python start.py
+
+Then open your browser to: http://localhost:5000
+
+================================================================================
+THAT'S IT! NO OTHER SETUP REQUIRED.
+================================================================================
+
+The AI will work immediately with your API key. No Ollama, no local models,
+no GPU required - everything runs in the cloud via Groq's API.
+
+TROUBLESHOOTING
+---------------
+If you see "Groq API key is INVALID":
+- Double-check you copied the full API key
+- Make sure there are no extra spaces
+- Try generating a new key from console.groq.com
+
+If you see connection errors:
+- Check your internet connection
+- Make sure the API key hasn't expired
+- Check Groq's status at status.groq.com
+
+COST INFORMATION
+----------------
+Groq offers a FREE tier with generous limits:
+- Free requests per day
+- Fast response times
+- No credit card required for free tier
+
+For usage limits, see: https://console.groq.com/docs/rate-limits
+
+SUPPORT
+-------
+For help with Groq API: https://console.groq.com/docs
+For Atlas AI issues: Check the README.md file
+
+================================================================================

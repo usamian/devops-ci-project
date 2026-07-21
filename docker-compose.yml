@@ -1,0 +1,45 @@
+version: '3.8'
+
+services:
+  jenkins:
+    image: jenkins/jenkins:lts-jdk17
+    container_name: jenkins-server
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+      - "50000:50000"
+    volumes:
+      - jenkins_data:/var/jenkins_home
+    networks:
+      - devops-network
+    environment:
+      - JAVA_OPTS=-Djenkins.install.runSetupWizard=false
+    privileged: true
+
+  sonarqube:
+    image: sonarqube:community
+    container_name: sonarqube-server
+    restart: unless-stopped
+    ports:
+      - "9000:9000"
+    volumes:
+      - sonarqube_data:/opt/sonarqube/data
+      - sonarqube_extensions:/opt/sonarqube/extensions
+      - sonarqube_logs:/opt/sonarqube/logs
+    networks:
+      - devops-network
+    environment:
+      - SONAR_JDBC_URL=
+      - SONAR_JDBC_USERNAME=sonar
+      - SONAR_JDBC_PASSWORD=sonar
+    depends_on:
+      - jenkins
+
+volumes:
+  jenkins_data:
+  sonarqube_data:
+  sonarqube_extensions:
+  sonarqube_logs:
+
+networks:
+  devops-network:

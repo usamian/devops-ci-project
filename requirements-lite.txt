@@ -1,0 +1,29 @@
+# Atlas AI - Lite Requirements (No heavy ML models)
+# For basic offline operation without spaCy/NLP models
+
+# Web Framework
+flask>=3.0.3 
+flask-cors>=4.0.1 
+flask-session>=0.8.0  
+
+# Data Processing
+pandas>=2.2.2 
+numpy>=1.26.4  
+tqdm>=4.66.4  
+
+# Web Scraping (for GOV.UK data)
+requests>=2.32.2  
+beautifulsoup4>=4.12.3  
+lxml>=5.2.2 
+
+# Environment & Config
+python-dotenv>=1.0.1 
+
+# Utilities
+pydantic>=2.7.1 
+loguru>=0.7.2 
+colorama>=0.4.6  
+
+# Testing
+pytest>=8.2.1 
+pytest-cov>=5.0.0

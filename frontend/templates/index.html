@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atlas AI - UK Immigration Assistant</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; }
+        
+        .chat-container {
+            max-width: 900px;
+            margin: 0 auto;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .chat-messages {
+            flex: 1;
+            overflow-y: auto;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        
+        .message {
+            max-width: 80%;
+            padding: 1rem 1.25rem;
+            border-radius: 1rem;
+            line-height: 1.6;
+            animation: fadeIn 0.3s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .user-message {
+            background: #2563eb;
+            color: white;
+            align-self: flex-end;
+            border-bottom-right-radius: 0.25rem;
+        }
+        
+        .bot-message {
+            background: white;
+            color: #1e293b;
+            align-self: flex-start;
+            border-bottom-left-radius: 0.25rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        
+        .bot-message strong { color: #1e40af; }
+        .bot-message a { color: #2563eb; text-decoration: underline; }
+        
+        .chat-input-area {
+            background: white;
+            padding: 1rem 1.5rem;
+            border-top: 1px solid #e2e8f0;
+            display: flex;
+            gap: 0.75rem;
+            align-items: center;
+        }
+        
+        .chat-input {
+            flex: 1;
+            padding: 0.875rem 1.25rem;
+            border: 1px solid #e2e8f0;
+            border-radius: 0.75rem;
+            font-size: 1rem;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+        
+        .chat-input:focus { border-color: #2563eb; }
+        
+        .send-btn {
+            width: 3rem;
+            height: 3rem;
+            border-radius: 0.75rem;
+            background: #2563eb;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .send-btn:hover { background: #1d4ed8; }
+        .send-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+        
+        .header {
+            background: white;
+            padding: 1rem 1.5rem;
+            border-bottom: 1px solid #e2e8f0;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .header h1 { font-size: 1.25rem; font-weight: 600; color: #1e293b; }
+        
+        .status { font-size: 0.75rem; color: #64748b; display: flex; align-items: center; gap: 0.25rem; }
+        .status-dot { width: 8px; height: 8px; border-radius: 50%; background: #22c55e; }
+        .status-dot.offline { background: #ef4444; }
+        
+        .disclaimer {
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            border-radius: 0.5rem;
+            padding: 0.75rem 1rem;
+            font-size: 0.875rem;
+            color: #92400e;
+            margin-top: 0.5rem;
+        }
+        
+        .message-content { white-space: pre-wrap; }
+        .message-content ul { margin-left: 1.25rem; margin-top: 0.5rem; }
+        .message-content li { margin-bottom: 0.25rem; }
+        
+        .suggestions { display: flex; flex-wrap: wrap; gap: 0.5rem; padding: 0.5rem 0; }
+        
+        .suggestion-btn {
+            padding: 0.5rem 1rem;
+            background: #f1f5f9;
+            border: 1px solid #e2e8f0;
+            border-radius: 2rem;
+            font-size: 0.875rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            color: #475569;
+        }
+        
+        .suggestion-btn:hover { background: #2563eb; color: white; border-color: #2563eb; }
+        
+        .typing-indicator { display: flex; gap: 0.25rem; padding: 0.5rem 0; }
+        .typing-indicator span {
+            width: 8px; height: 8px; background: #94a3b8; border-radius: 50%;
+            animation: bounce 1.4s infinite ease-in-out both;
+        }
+        .typing-indicator span:nth-child(1) { animation-delay: -0.32s; }
+        .typing-indicator span:nth-child(2) { animation-delay: -0.16s; }
+        
+        @keyframes bounce {
+            0%, 80%, 100% { transform: scale(0); }
+            40% { transform: scale(1); }
+        }
+        
+        .header-btn {
+            padding: 0.5rem 1rem;
+            background: #f1f5f9;
+            border: 1px solid #e2e8f0;
+            border-radius: 0.5rem;
+            font-size: 0.875rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            color: #475569;
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+        
+        .header-btn:hover { background: #e2e8f0; }
+        .header-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+        .header-btn i.fa-spin { animation: fa-spin 1s infinite linear; }
+        
+        @keyframes fa-spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="chat-container">
+        <!-- Header -->
+        <div class="header">
+            <div class="w-10 h-10 rounded-lg bg-blue-600 flex items-center justify-center text-white">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"/>
+                    <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                </svg>
+            </div>
+            <div class="flex-1">
+                <h1>Atlas AI</h1>
+                <div class="status">
+                    <span class="status-dot" id="statusDot"></span>
+                    <span id="statusText">Connecting...</span>
+                </div>
+            </div>
+            <div class="flex items-center gap-2">
+                <button onclick="updateData()" id="updateBtn" class="header-btn" title="Update data from GOV.UK">
+                    <i class="fas fa-sync-alt"></i> Update
+                </button>
+                <button onclick="resetChat()" class="header-btn">
+                    <i class="fas fa-redo"></i> New Chat
+                </button>
+            </div>
+        </div>
+        
+        <!-- Chat Messages -->
+        <div class="chat-messages" id="chatMessages"></div>
+        
+        <!-- Input Area -->
+        <div class="chat-input-area">
+            <input type="text" class="chat-input" id="userInput" placeholder="Ask about UK visas..." onkeypress="handleKeyPress(event)">
+            <button class="send-btn" id="sendBtn" onclick="sendMessage()">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <script>
+        let sessionId = null;
+        const chatMessages = document.getElementById('chatMessages');
+        const userInput = document.getElementById('userInput');
+        const sendBtn = document.getElementById('sendBtn');
+        const statusDot = document.getElementById('statusDot');
+        const statusText = document.getElementById('statusText');
+        
+        checkHealth();
+        loadGreeting();
+        
+        async function checkHealth() {
+            try {
+                const response = await fetch('/api/health');
+                const data = await response.json();
+                if (data.status === 'healthy') {
+                    statusDot.classList.remove('offline');
+                    statusText.textContent = data.ollama_available ? 'AI Online' : 'Online';
+                } else {
+                    statusDot.classList.add('offline');
+                    statusText.textContent = 'Offline';
+                }
+            } catch (e) {
+                statusDot.classList.add('offline');
+                statusText.textContent = 'Connection Error';
+            }
+        }
+        
+        async function loadGreeting() {
+            try {
+                const response = await fetch('/api/greeting');
+                const data = await response.json();
+                addBotMessage(data.message);
+                if (data.suggestions) addSuggestions(data.suggestions);
+            } catch (e) {
+                addBotMessage("Hello! I'm Atlas AI, your UK immigration assistant. How can I help you today?");
+            }
+        }
+        
+        function addSuggestions(suggestions) {
+            const div = document.createElement('div');
+            div.className = 'suggestions';
+            div.style.alignSelf = 'flex-start';
+            suggestions.forEach(s => {
+                const btn = document.createElement('button');
+                btn.className = 'suggestion-btn';
+                btn.textContent = s;
+                btn.onclick = () => { userInput.value = s; sendMessage(); };
+                div.appendChild(btn);
+            });
+            chatMessages.appendChild(div);
+            scrollToBottom();
+        }
+        
+        function addUserMessage(text) {
+            const div = document.createElement('div');
+            div.className = 'message user-message';
+            div.textContent = text;
+            chatMessages.appendChild(div);
+            scrollToBottom();
+        }
+        
+        function addBotMessage(html) {
+            const div = document.createElement('div');
+            div.className = 'message bot-message';
+            let formatted = html
+                .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+                .replace(/\*(.*?)\*/g, '<em>$1</em>')
+                .replace(/^- (.+)$/gm, '<li>$1</li>')
+                .replace(/(<li>.*<\/li>)/s, '<ul>$1</ul>');
+            div.innerHTML = `<div class="message-content">${formatted}</div>`;
+            chatMessages.appendChild(div);
+            scrollToBottom();
+        }
+        
+        function showTypingIndicator() {
+            const div = document.createElement('div');
+            div.className = 'typing-indicator';
+            div.id = 'typingIndicator';
+            div.innerHTML = '<span></span><span></span><span></span>';
+            div.style.alignSelf = 'flex-start';
+            chatMessages.appendChild(div);
+            scrollToBottom();
+        }
+        
+        function hideTypingIndicator() {
+            const indicator = document.getElementById('typingIndicator');
+            if (indicator) indicator.remove();
+        }
+        
+        function scrollToBottom() { chatMessages.scrollTop = chatMessages.scrollHeight; }
+        
+        async function sendMessage() {
+            const message = userInput.value.trim();
+            if (!message) return;
+            
+            userInput.value = '';
+            sendBtn.disabled = true;
+            addUserMessage(message);
+            showTypingIndicator();
+            
+            try {
+                const response = await fetch('/api/chat', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ message }),
+                });
+                const data = await response.json();
+                hideTypingIndicator();
+                
+                if (data.response) {
+                    addBotMessage(data.response);
+                } else if (data.error) {
+                    addBotMessage("Sorry, I encountered an error. Please try again.");
+                }
+            } catch (e) {
+                hideTypingIndicator();
+                addBotMessage("Sorry, I'm having trouble connecting. Please try again.");
+            }
+            
+            sendBtn.disabled = false;
+            userInput.focus();
+        }
+        
+        function handleKeyPress(event) {
+            if (event.key === 'Enter' && !event.shiftKey) { event.preventDefault(); sendMessage(); }
+        }
+        
+        async function resetChat() {
+            chatMessages.innerHTML = '';
+            await fetch('/api/reset', { method: 'POST' });
+            loadGreeting();
+        }
+        
+        async function updateData() {
+            const updateBtn = document.getElementById('updateBtn');
+            const icon = updateBtn.querySelector('i');
+            updateBtn.disabled = true;
+            icon.classList.add('fa-spin');
+            
+            addBotMessage("🔄 Starting data update from GOV.UK...");
+            
+            try {
+                const checkResponse = await fetch('/api/update-data', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ action: 'check' }),
+                });
+                const checkData = await checkResponse.json();
+                
+                if (checkData.total_changes === 0) {
+                    addBotMessage("✅ All data is up to date!");
+                } else {
+                    addBotMessage(`📊 Found ${checkData.total_changes} changes. Updating...`);
+                    const updateResponse = await fetch('/api/update-data', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ action: 'update' }),
+                    });
+                    const updateData = await updateResponse.json();
+                    if (updateData.status === 'success') {
+                        addBotMessage(`✅ Update complete! Pages updated: ${updateData.pages_updated}`);
+                    }
+                }
+            } catch (e) {
+                addBotMessage(`❌ Update failed: ${e.message}`);
+            } finally {
+                updateBtn.disabled = false;
+                icon.classList.remove('fa-spin');
+            }
+        }
+    </script>
+</body>
+</html>

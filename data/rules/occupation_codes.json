@@ -1,0 +1,590 @@
+{
+  "_metadata": {
+    "source": "UK Home Office Skilled Worker Visa Appendix Skilled Occupations",
+    "url": "https://www.gov.uk/government/publications/skilled-worker-visa-immigration-salary-list",
+    "last_updated": "2024-04-04",
+    "notes": "Going rates from Table 1 of the Skilled Worker Appendix. Minimum salary is the higher of the general threshold (£38,700) or the going rate for the specific role. New entrant rate is 70% of going rate."
+  },
+  "occupations": [
+    {
+      "soc_code": "1115",
+      "title": "Chief executives and senior officials",
+      "going_rate_annual": 67200,
+      "new_entrant_rate": 47040,
+      "eligible": true,
+      "source": "Appendix Skilled Occupations – Table 1"
+    },
+    {
+      "soc_code": "1121",
+      "title": "Production managers and directors in manufacturing",
+      "going_rate_annual": 48100,
+      "new_entrant_rate": 33670,
+      "eligible": true,
+      "source": "Appendix Skilled Occupations – Table 1"
+    },
+    {
+      "soc_code": "1131",
+      "title": "Financial managers and directors",
+      "going_rate_annual": 62400,
+      "new_entrant_rate": 43680,
+      "eligible": true,
+      "source": "Appendix Skilled Occupations – Table 1"
+    },
+    {
+      "soc_code": "1132",
+      "title": "Marketing and sales directors",
+      "going_rate_annual": 55300,
+      "new_entrant_rate": 38710,
+      "eligible": true,
+      "source": "Appendix Skilled Occupations – Table 1"
+    },
+    {
+      "soc_code": "1133",
+      "title": "Purchasing managers and directors",
+      "going_rate_annual": 49100,
+      "new_entrant_rate": 34370,
+      "eligible": true,
+      "source": "Appendix Skilled Occupations – Table 1"
+    },
+    {
+      "soc_code": "1134",
+      "title": "Advertising and public relations directors",
+      "going_rate_annual": 52000,
+      "new_entrant_rate": 36400,
+      "eligible": true,
+      "source": "Appendix Skilled Occupations – Table 1"
+    },
+    {
+      "soc_code": "1135",
+      "title": "Human resource managers and directors",
+      "going_rate_annual": 47900,
+      "new_entrant_rate": 33530,
+      "eligible": true,
+      "source": "Appendix Skilled Occupations – Table 1"
+    },
+    {
+      "soc_code": "1136",
+      "title": "Information technology and telecommunications directors",
+      "going_rate_annual": 72100,
+      "new_entrant_rate": 50470,
+      "eligible": true,
+      "source": "Appendix Skilled Occupations – Table 1"
+    },
+    {
+      "soc_code": "1150",
+      "title": "Financial institution managers and directors",
+      "going_rate_annual": 60500,
+      "new_entrant_rate": 42350,
+      "eligible": true,
+      "source": "Appendix Skilled Occupations – Table 1"
+    },
+    {
+      "soc_code": "2111",
+      "title": "Chemical scientists",
+      "going_rate_annual": 38700,
+      "new_entrant_rate": 27090,
+      "eligible": true,
+      "source": "Appendix Skilled Occupations – Table 1"
+    },
+    {
+      "soc_code": "2112",
+      "title": "Biological scientists and biochemists",
+      "going_rate_annual": 38700,
+      "new_entrant_rate": 27090,
+      "eligible": true,
+      "source": "Appendix Skilled Occupations – Table 1"
+    },
+    {
+      "soc_code": "2113",
+      "title": "Physical scientists",
+      "going_rate_annual": 40300,
+      "new_entrant_rate": 28210,
+      "eligible": true,
+      "source": "Appendix Skilled Occupations – Table 1"
+    },
+    {
+      "soc_code": "2119",
+      "title": "Natural and social science professionals n.e.c.",
+      "going_rate_annual": 38700,
+      "new_entrant_rate": 27090,
+      "eligible": true,
+      "source": "Appendix Skilled Occupations – Table 1"
+    },
+    {
+      "soc_code": "2121",
+      "title": "Civil engineers",
+      "going_rate_annual": 43600,
+      "new_entrant_rate": 30520,
+      "eligible": true,
+      "source": "Appendix Skilled Occupations – Table 1"
+    },
+    {
+      "soc_code": "2122",
+      "title": "Mechanical engineers",
+      "going_rate_annual": 43600,
+      "new_entrant_rate": 30520,
+      "eligible": true,
+      "source": "Appendix Skilled Occupations – Table 1"
+    },
+    {
+      "soc_code": "2123",
+      "title": "Electrical engineers",
+      "going_rate_annual": 44100,
+      "new_entrant_rate": 30870,
+      "eligible": true,
+      "source": "Appendix Skilled Occupations – Table 1"
+    },
+    {
+      "soc_code": "2124",
+      "title": "Electronics engineers",
+      "going_rate_annual": 44100,
+      "new_entrant_rate": 30870,
+      "eligible": true,
+      "source": "Appendix Skilled Occupations – Table 1"
+    },
+    {
+      "soc_code": "2126",
+      "title": "Design and development engineers",
+      "going_rate_annual": 43600,
+      "new_entrant_rate": 30520,
+      "eligible": true,
+      "source": "Appendix Skilled Occupations – Table 1"
+    },
+    {
+      "soc_code": "2127",
+      "title": "Production and process engineers",
+      "going_rate_annual": 40300,
+      "new_entrant_rate": 28210,
+      "eligible": true,
+      "source": "Appendix Skilled Occupations – Table 1"
+    },
+    {
+      "soc_code": "2129",
+      "title": "Engineering professionals n.e.c.",
+      "going_rate_annual": 43600,
+      "new_entrant_rate": 30520,
+      "eligible": true,
+      "source": "Appendix Skilled Occupations – Table 1"
+    },
+    {
+      "soc_code": "2133",
+      "title": "IT specialist managers",
+      "going_rate_annual": 55100,
+      "new_entrant_rate": 38570,
+      "eligible": true,
+      "source": "Appendix Skilled Occupations – Table 1"
+    },
+    {
+      "soc_code": "2134",
+      "title": "IT project and programme managers",
+      "going_rate_annual": 52100,
+      "new_entrant_rate": 36470,
+      "eligible": true,
+      "source": "Appendix Skilled Occupations – Table 1"
+    },
+    {
+      "soc_code": "2135",
+      "title": "IT business analysts, architects and systems designers",
+      "going_rate_annual": 52600,
+      "new_entrant_rate": 36820,
+      "eligible": true,
+      "source": "Appendix Skilled Occupations – Table 1"
+    },
+    {
+      "soc_code": "2136",
+      "title": "Programmers and software development professionals",
+      "going_rate_annual": 49400,
+      "new_entrant_rate": 34580,
+      "eligible": true,
+      "source": "Appendix Skilled Occupations – Table 1"
+    },
+    {
+      "soc_code": "2137",
+      "title": "Web design and development professionals",
+      "going_rate_annual": 40700,
+      "new_entrant_rate": 28490,
+      "eligible": true,
+      "source": "Appendix Skilled Occupations – Table 1"
+    },
+    {
+      "soc_code": "2139",
+      "title": "Information technology and telecommunications professionals n.e.c.",
+      "going_rate_annual": 46100,
+      "new_entrant_rate": 32270,
+      "eligible": true,
+      "source": "Appendix Skilled Occupations – Table 1"
+    },
+    {
+      "soc_code": "2141",
+      "title": "Conservation professionals",
+      "going_rate_annual": 38700,
+      "new_entrant_rate": 27090,
+      "eligible": true,
+      "source": "Appendix Skilled Occupations – Table 1"
+    },
+    {
+      "soc_code": "2150",
+      "title": "Research and development managers",
+      "going_rate_annual": 50000,
+      "new_entrant_rate": 35000,
+      "eligible": true,
+      "source": "Appendix Skilled Occupations – Table 1"
+    },
+    {
+      "soc_code": "2211",
+      "title": "Medical practitioners (doctors)",
+      "going_rate_annual": 49923,
+      "new_entrant_rate": 34946,
+      "eligible": true,
+      "source": "Appendix Skilled Occupations – Table 1"
+    },
+    {
+      "soc_code": "2212",
+      "title": "Psychologists",
+      "going_rate_annual": 43900,
+      "new_entrant_rate": 30730,
+      "eligible": true,
+      "source": "Appendix Skilled Occupations – Table 1"
+    },
+    {
+      "soc_code": "2213",
+      "title": "Pharmacists",
+      "going_rate_annual": 48900,
+      "new_entrant_rate": 34230,
+      "eligible": true,
+      "source": "Appendix Skilled Occupations – Table 1"
+    },
+    {
+      "soc_code": "2214",
+      "title": "Ophthalmic opticians",
+      "going_rate_annual": 43900,
+      "new_entrant_rate": 30730,
+      "eligible": true,
+      "source": "Appendix Skilled Occupations – Table 1"
+    },
+    {
+      "soc_code": "2215",
+      "title": "Dental practitioners",
+      "going_rate_annual": 43900,
+      "new_entrant_rate": 30730,
+      "eligible": true,
+      "source": "Appendix Skilled Occupations – Table 1"
+    },
+    {
+      "soc_code": "2217",
+      "title": "Medical radiographers",
+      "going_rate_annual": 38700,
+      "new_entrant_rate": 27090,
+      "eligible": true,
+      "source": "Appendix Skilled Occupations – Table 1"
+    },
+    {
+      "soc_code": "2218",
+      "title": "Podiatrists",
+      "going_rate_annual": 38700,
+      "new_entrant_rate": 27090,
+      "eligible": true,
+      "source": "Appendix Skilled Occupations – Table 1"
+    },
+    {
+      "soc_code": "2219",
+      "title": "Health professionals n.e.c.",
+      "going_rate_annual": 38700,
+      "new_entrant_rate": 27090,
+      "eligible": true,
+      "source": "Appendix Skilled Occupations – Table 1"
+    },
+    {
+      "soc_code": "2221",
+      "title": "Physiotherapists",
+      "going_rate_annual": 38700,
+      "new_entrant_rate": 27090,
+      "eligible": true,
+      "source": "Appendix Skilled Occupations – Table 1"
+    },
+    {
+      "soc_code": "2222",
+      "title": "Occupational therapists",
+      "going_rate_annual": 38700,
+      "new_entrant_rate": 27090,
+      "eligible": true,
+      "source": "Appendix Skilled Occupations – Table 1"
+    },
+    {
+      "soc_code": "2223",
+      "title": "Speech and language therapists",
+      "going_rate_annual": 38700,
+      "new_entrant_rate": 27090,
+      "eligible": true,
+      "source": "Appendix Skilled Occupations – Table 1"
+    },
+    {
+      "soc_code": "2225",
+      "title": "Nurses",
+      "going_rate_annual": 29000,
+      "new_entrant_rate": 20300,
+      "eligible": true,
+      "health_care_worker": true,
+      "notes": "Health and Care Worker Visa available. Salary threshold different for NHS/social care.",
+      "source": "Appendix Skilled Occupations – Table 1"
+    },
+    {
+      "soc_code": "2231",
+      "title": "Paramedics",
+      "going_rate_annual": 29000,
+      "new_entrant_rate": 20300,
+      "eligible": true,
+      "health_care_worker": true,
+      "source": "Appendix Skilled Occupations – Table 1"
+    },
+    {
+      "soc_code": "2311",
+      "title": "Higher education teaching professionals",
+      "going_rate_annual": 38700,
+      "new_entrant_rate": 27090,
+      "eligible": true,
+      "source": "Appendix Skilled Occupations – Table 1"
+    },
+    {
+      "soc_code": "2312",
+      "title": "Further education teaching professionals",
+      "going_rate_annual": 38700,
+      "new_entrant_rate": 27090,
+      "eligible": true,
+      "source": "Appendix Skilled Occupations – Table 1"
+    },
+    {
+      "soc_code": "2314",
+      "title": "Secondary education teaching professionals",
+      "going_rate_annual": 38700,
+      "new_entrant_rate": 27090,
+      "eligible": true,
+      "source": "Appendix Skilled Occupations – Table 1"
+    },
+    {
+      "soc_code": "2315",
+      "title": "Primary and nursery education teaching professionals",
+      "going_rate_annual": 38700,
+      "new_entrant_rate": 27090,
+      "eligible": true,
+      "source": "Appendix Skilled Occupations – Table 1"
+    },
+    {
+      "soc_code": "2411",
+      "title": "Solicitors",
+      "going_rate_annual": 48700,
+      "new_entrant_rate": 34090,
+      "eligible": true,
+      "source": "Appendix Skilled Occupations – Table 1"
+    },
+    {
+      "soc_code": "2412",
+      "title": "Barristers and judges",
+      "going_rate_annual": 60000,
+      "new_entrant_rate": 42000,
+      "eligible": true,
+      "source": "Appendix Skilled Occupations – Table 1"
+    },
+    {
+      "soc_code": "2421",
+      "title": "Chartered and certified accountants",
+      "going_rate_annual": 42500,
+      "new_entrant_rate": 29750,
+      "eligible": true,
+      "source": "Appendix Skilled Occupations – Table 1"
+    },
+    {
+      "soc_code": "2422",
+      "title": "Management consultants and business analysts",
+      "going_rate_annual": 46600,
+      "new_entrant_rate": 32620,
+      "eligible": true,
+      "source": "Appendix Skilled Occupations – Table 1"
+    },
+    {
+      "soc_code": "2423",
+      "title": "Business and financial project management professionals",
+      "going_rate_annual": 43000,
+      "new_entrant_rate": 30100,
+      "eligible": true,
+      "source": "Appendix Skilled Occupations – Table 1"
+    },
+    {
+      "soc_code": "2424",
+      "title": "Business and related research professionals",
+      "going_rate_annual": 38700,
+      "new_entrant_rate": 27090,
+      "eligible": true,
+      "source": "Appendix Skilled Occupations – Table 1"
+    },
+    {
+      "soc_code": "2425",
+      "title": "Actuaries, economists and statisticians",
+      "going_rate_annual": 48000,
+      "new_entrant_rate": 33600,
+      "eligible": true,
+      "source": "Appendix Skilled Occupations – Table 1"
+    },
+    {
+      "soc_code": "2426",
+      "title": "Architects",
+      "going_rate_annual": 42500,
+      "new_entrant_rate": 29750,
+      "eligible": true,
+      "source": "Appendix Skilled Occupations – Table 1"
+    },
+    {
+      "soc_code": "2431",
+      "title": "Welfare professionals",
+      "going_rate_annual": 38700,
+      "new_entrant_rate": 27090,
+      "eligible": true,
+      "source": "Appendix Skilled Occupations – Table 1"
+    },
+    {
+      "soc_code": "2442",
+      "title": "Social workers",
+      "going_rate_annual": 38700,
+      "new_entrant_rate": 27090,
+      "eligible": true,
+      "source": "Appendix Skilled Occupations – Table 1"
+    },
+    {
+      "soc_code": "3111",
+      "title": "Laboratory technicians",
+      "going_rate_annual": 28500,
+      "new_entrant_rate": 19950,
+      "eligible": true,
+      "source": "Appendix Skilled Occupations – Table 1"
+    },
+    {
+      "soc_code": "3112",
+      "title": "Electrical and electronics technicians",
+      "going_rate_annual": 33000,
+      "new_entrant_rate": 23100,
+      "eligible": true,
+      "source": "Appendix Skilled Occupations – Table 1"
+    },
+    {
+      "soc_code": "3113",
+      "title": "Engineering technicians",
+      "going_rate_annual": 33400,
+      "new_entrant_rate": 23380,
+      "eligible": true,
+      "source": "Appendix Skilled Occupations – Table 1"
+    },
+    {
+      "soc_code": "3539",
+      "title": "Finance and investment analysts",
+      "going_rate_annual": 44800,
+      "new_entrant_rate": 31360,
+      "eligible": true,
+      "source": "Appendix Skilled Occupations – Table 1"
+    },
+    {
+      "soc_code": "3545",
+      "title": "Sales accounts and business development managers",
+      "going_rate_annual": 38700,
+      "new_entrant_rate": 27090,
+      "eligible": true,
+      "source": "Appendix Skilled Occupations – Table 1"
+    },
+    {
+      "soc_code": "4112",
+      "title": "National government administrative occupations",
+      "going_rate_annual": 28500,
+      "new_entrant_rate": 19950,
+      "eligible": true,
+      "source": "Appendix Skilled Occupations – Table 1"
+    },
+    {
+      "soc_code": "5215",
+      "title": "Welding trades",
+      "going_rate_annual": 32000,
+      "new_entrant_rate": 22400,
+      "eligible": true,
+      "source": "Appendix Skilled Occupations – Table 1"
+    },
+    {
+      "soc_code": "5216",
+      "title": "Pipe fitters",
+      "going_rate_annual": 38000,
+      "new_entrant_rate": 26600,
+      "eligible": true,
+      "source": "Appendix Skilled Occupations – Table 1"
+    },
+    {
+      "soc_code": "9999",
+      "title": "NOT ELIGIBLE – Occupation not on approved list",
+      "going_rate_annual": 0,
+      "new_entrant_rate": 0,
+      "eligible": false,
+      "source": "GOV.UK – Appendix Skilled Occupations"
+    }
+  ],
+  "job_title_aliases": {
+    "software engineer": "2136",
+    "software developer": "2136",
+    "backend developer": "2136",
+    "frontend developer": "2137",
+    "full stack developer": "2136",
+    "data scientist": "2425",
+    "data analyst": "2425",
+    "machine learning engineer": "2136",
+    "devops engineer": "2136",
+    "cloud engineer": "2136",
+    "cybersecurity analyst": "2139",
+    "network engineer": "2139",
+    "systems administrator": "2139",
+    "it project manager": "2134",
+    "product manager": "2135",
+    "business analyst": "2422",
+    "nurse": "2225",
+    "doctor": "2211",
+    "physician": "2211",
+    "pharmacist": "2213",
+    "dentist": "2215",
+    "physiotherapist": "2221",
+    "teacher": "2314",
+    "secondary school teacher": "2314",
+    "primary school teacher": "2315",
+    "university lecturer": "2311",
+    "professor": "2311",
+    "solicitor": "2411",
+    "lawyer": "2411",
+    "barrister": "2412",
+    "accountant": "2421",
+    "chartered accountant": "2421",
+    "management consultant": "2422",
+    "financial analyst": "3539",
+    "investment analyst": "3539",
+    "civil engineer": "2121",
+    "mechanical engineer": "2122",
+    "electrical engineer": "2123",
+    "architect": "2426",
+    "social worker": "2442",
+    "psychologist": "2212",
+    "speech therapist": "2223",
+    "occupational therapist": "2222",
+    "paramedic": "2231",
+    "lab technician": "3111",
+    "chemical scientist": "2111",
+    "biologist": "2112",
+    "biochemist": "2112"
+  },
+  "shortage_occupations": {
+    "description": "Occupations on the Immigration Salary List (April 2024)",
+    "source_url": "https://www.gov.uk/government/publications/skilled-worker-visa-immigration-salary-list",
+    "soc_codes": [
+      "2225",
+      "2231",
+      "2217",
+      "2218",
+      "2221",
+      "2222",
+      "2223",
+      "2219",
+      "3111"
+    ]
+  }
+}

@@ -1,0 +1,135 @@
+{
+  "_metadata": {
+    "visa_type": "Skilled Worker Visa",
+    "source": "GOV.UK Immigration Rules – Appendix Skilled Worker",
+    "url": "https://www.gov.uk/skilled-worker-visa",
+    "rules_url": "https://www.gov.uk/guidance/immigration-rules/immigration-rules-appendix-skilled-worker",
+    "last_updated": "2024-04-04",
+    "notes": "Rules effective from 4 April 2024 following Statement of Changes HC590"
+  },
+  "rules": {
+    "sponsorship": {
+      "rule_id": "SW-001",
+      "description": "Applicant must have a valid Certificate of Sponsorship (CoS) from a UK-licensed sponsor",
+      "requirement": "mandatory",
+      "source_url": "https://www.gov.uk/skilled-worker-visa/your-job",
+      "source_section": "Appendix Skilled Worker – SW 6.1",
+      "details": "The sponsor must hold a valid Skilled Worker sponsor licence. The CoS must be assigned before the application is submitted. It must not have been used in a previous successful application."
+    },
+    "occupation": {
+      "rule_id": "SW-002",
+      "description": "The job must be an eligible occupation at RQF level 3 or above",
+      "requirement": "mandatory",
+      "source_url": "https://www.gov.uk/government/publications/skilled-worker-visa-immigration-salary-list",
+      "source_section": "Appendix Skilled Occupations",
+      "details": "The occupation must appear in the Immigration Salary List (Appendix Skilled Occupations). The job title alone is not sufficient; it must correspond to the correct SOC code."
+    },
+    "salary": {
+      "rule_id": "SW-003",
+      "description": "Minimum salary thresholds",
+      "requirement": "mandatory",
+      "source_url": "https://www.gov.uk/skilled-worker-visa/your-job",
+      "source_section": "Appendix Skilled Worker – SW 13",
+      "general_threshold": 38700,
+      "new_entrant_threshold": 30960,
+      "minimum_absolute": 26200,
+      "details": "From April 2024 the general threshold is £38,700/year. New entrants pay the lower of £30,960/year or 70% of the going rate. The salary paid must meet or exceed BOTH the general threshold AND the going rate for the specific SOC code.",
+      "new_entrant_criteria": [
+        "Under 26 years of age at time of application",
+        "Applying for a role where the going rate is less than £38,700",
+        "Switching from Student visa",
+        "Switching from Graduate visa",
+        "Working towards a recognised professional qualification"
+      ]
+    },
+    "english_language": {
+      "rule_id": "SW-004",
+      "description": "English language requirement",
+      "requirement": "mandatory",
+      "source_url": "https://www.gov.uk/skilled-worker-visa/knowledge-of-english",
+      "source_section": "Appendix English Language – Part 2",
+      "required_level": "B1",
+      "accepted_evidence": [
+        "Passport or travel document issued by majority English-speaking country (Australia, Canada, New Zealand, USA, etc.)",
+        "GCSE, A-level, Scottish Higher in English Language/Literature (UK, Channel Islands, Isle of Man)",
+        "UK Bachelor's, Master's or PhD degree taught in English",
+        "Approved English language test (e.g., IELTS, TOEFL iBT, PTE Academic) – minimum B1 CEFR",
+        "Academic qualification from majority English-speaking country at degree level or above"
+      ],
+      "exempt_countries": [
+        "Antigua and Barbuda", "Australia", "Bahamas", "Barbados", "Belize",
+        "Canada", "Dominica", "Grenada", "Guyana", "Jamaica", "Malta",
+        "New Zealand", "St Kitts and Nevis", "St Lucia", "St Vincent and the Grenadines",
+        "Trinidad and Tobago", "United States of America"
+      ]
+    },
+    "points": {
+      "rule_id": "SW-005",
+      "description": "Points-based requirements (70 points total)",
+      "requirement": "mandatory",
+      "source_url": "https://www.gov.uk/skilled-worker-visa/eligibility",
+      "source_section": "Appendix Skilled Worker – SW 1",
+      "mandatory_points": {
+        "valid_cos": 20,
+        "eligible_occupation": 20,
+        "minimum_salary": 20
+      },
+      "total_mandatory": 60,
+      "tradeable_points": {
+        "shortage_occupation_bonus": 20,
+        "phd_bonus": 10,
+        "stem_phd_bonus": 20
+      },
+      "total_required": 70,
+      "details": "60 mandatory points are awarded for holding a valid CoS, working in an eligible occupation at the correct skill level, and meeting the salary requirement. An additional 10 points must come from tradeable characteristics (e.g., shortage occupation, PhD, STEM PhD)."
+    },
+    "age": {
+      "rule_id": "SW-006",
+      "description": "Age requirement",
+      "requirement": "mandatory",
+      "minimum_age": 18,
+      "source_url": "https://www.gov.uk/skilled-worker-visa/eligibility",
+      "source_section": "Appendix Skilled Worker – SW 3.1"
+    },
+    "financial": {
+      "rule_id": "SW-007",
+      "description": "Financial maintenance requirement",
+      "requirement": "mandatory",
+      "source_url": "https://www.gov.uk/skilled-worker-visa/financial-requirements",
+      "source_section": "Appendix Finance – Part 10",
+      "minimum_savings": 1270,
+      "savings_held_days": 28,
+      "exempt_if": "Sponsor certifies maintenance on CoS (A-rated sponsors only)",
+      "details": "Applicant must hold at least £1,270 in personal savings for 28 consecutive days. This requirement is waived if the sponsor is A-rated and certifies maintenance on the CoS."
+    },
+    "criminal_record": {
+      "rule_id": "SW-008",
+      "description": "No specific criminal record bar unless the applicant has received a custodial sentence of 12 months or more, is a persistent offender, or has committed a serious crime",
+      "requirement": "disqualifying_if_met",
+      "source_url": "https://www.gov.uk/skilled-worker-visa/eligibility",
+      "source_section": "Paragraph 320 of the Immigration Rules"
+    },
+    "immigration_history": {
+      "rule_id": "SW-009",
+      "description": "No current ban from UK or outstanding visa overstay violations",
+      "requirement": "disqualifying_if_met",
+      "source_url": "https://www.gov.uk/skilled-worker-visa/eligibility"
+    }
+  },
+  "shortage_occupations": {
+    "description": "Occupations on the Immigration Salary List where salary threshold is reduced to 80% of going rate",
+    "source_url": "https://www.gov.uk/government/publications/skilled-worker-visa-immigration-salary-list",
+    "soc_codes": ["2225", "2231", "2217", "2218", "2221", "2222", "2223", "2219", "3111"]
+  },
+  "fees": {
+    "visa_application": {
+      "up_to_3_years": 719,
+      "over_3_years": 1420,
+      "source_url": "https://www.gov.uk/skilled-worker-visa/apply",
+      "last_checked": "2024-04-04"
+    },
+    "immigration_health_surcharge_per_year": 1035,
+    "priority_service": 500,
+    "super_priority_service": 800
+  }
+}

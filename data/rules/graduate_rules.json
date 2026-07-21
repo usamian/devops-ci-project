@@ -1,0 +1,69 @@
+{
+  "_metadata": {
+    "visa_type": "Graduate Visa",
+    "source": "GOV.UK Graduate visa guidance",
+    "url": "https://www.gov.uk/graduate-visa",
+    "last_updated": "2024-04-04",
+    "notes": "This visa allows international students who have completed a UK degree to stay in the UK to work for 2 years (3 years for PhD graduates)."
+  },
+  "rules": {
+    "uk_degree": {
+      "rule_id": "GR-001",
+      "description": "Applicant must have completed an eligible UK degree",
+      "requirement": "mandatory",
+      "source_url": "https://www.gov.uk/graduate-visa/eligibility",
+      "source_section": "Graduate Route – Qualification requirements",
+      "details": "You must have completed a UK Bachelor's degree, Master's degree, or PhD from a recognized UK higher education institution."
+    },
+    "student_visa": {
+      "rule_id": "GR-002",
+      "description": "Applicant must currently hold a valid Student visa",
+      "requirement": "mandatory",
+      "source_url": "https://www.gov.uk/graduate-visa/eligibility",
+      "source_section": "Current immigration status",
+      "details": "You must currently be in the UK with a valid Student visa (or Tier 4 visa) to apply for the Graduate Route."
+    },
+    "study_duration": {
+      "rule_id": "GR-003",
+      "description": "Applicant must have studied in the UK for the required duration",
+      "requirement": "mandatory",
+      "source_url": "https://www.gov.uk/graduate-visa/eligibility",
+      "source_section": "Study requirements",
+      "details": "You must have studied in the UK for at least 12 months for courses longer than 12 months, or the full duration for shorter courses."
+    },
+    "institution_status": {
+      "rule_id": "GR-004",
+      "description": "Educational institution must have a track record of compliance",
+      "requirement": "mandatory",
+      "source_url": "https://www.gov.uk/graduate-visa/eligibility",
+      "source_section": "Institution requirements",
+      "details": "Your UK educational institution must have a track record of compliance with UKVI sponsor duties."
+    }
+  },
+  "qualification_levels": {
+    "6": {
+      "name": "Bachelor's degree",
+      "duration_years": 2,
+      "description": "RQF level 6 - Bachelor's degree with honours"
+    },
+    "7": {
+      "name": "Master's degree",
+      "duration_years": 2,
+      "description": "RQF level 7 - Master's degree"
+    },
+    "8": {
+      "name": "Doctoral degree (PhD)",
+      "duration_years": 3,
+      "description": "RQF level 8 - Doctoral degree"
+    }
+  },
+  "fees": {
+    "visa_application": {
+      "main_applicant": 822,
+      "source_url": "https://www.gov.uk/graduate-visa/apply",
+      "last_checked": "2024-04-04"
+    },
+    "immigration_health_surcharge_per_year": 1035,
+    "note": "No priority service available for Graduate visa"
+  }
+}

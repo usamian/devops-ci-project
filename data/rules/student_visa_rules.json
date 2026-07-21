@@ -1,0 +1,83 @@
+{
+  "_metadata": {
+    "visa_type": "Student Visa",
+    "source": "GOV.UK Student visa guidance",
+    "url": "https://www.gov.uk/student-visa",
+    "last_updated": "2024-04-04",
+    "notes": "This visa is for individuals who want to study in the UK at a licensed student sponsor (school, college or university)."
+  },
+  "rules": {
+    "cas_offer": {
+      "rule_id": "ST-001",
+      "description": "Must have unconditional offer and CAS from licensed student sponsor",
+      "requirement": "mandatory",
+      "source_url": "https://www.gov.uk/student-visa/eligibility",
+      "source_section": "Confirmation of Acceptance for Studies (CAS)",
+      "details": "You must have an unconditional offer from a licensed UK student sponsor and receive a CAS reference number."
+    },
+    "english_language": {
+      "rule_id": "ST-002",
+      "description": "Must meet English language requirements at CEFR level B1 (or higher for degree level)",
+      "requirement": "mandatory",
+      "source_url": "https://www.gov.uk/student-visa/knowledge-of-english",
+      "source_section": "English language requirements",
+      "required_level_bachelor": "B1",
+      "required_level_degree": "B2",
+      "details": "You must demonstrate English language proficiency at CEFR level B1 for below degree level, or B2 for degree level study."
+    },
+    "maintenance": {
+      "rule_id": "ST-003",
+      "description": "Must have sufficient funds for course fees and living costs",
+      "requirement": "mandatory",
+      "source_url": "https://www.gov.uk/student-visa/money",
+      "source_section": "Maintenance funds",
+      "london_monthly": 1334,
+      "outside_london_monthly": 1023,
+      "max_months": 9,
+      "details": "You must show sufficient funds for course fees plus living costs: £1,334/month (London) or £1,023/month (outside London) for up to 9 months."
+    },
+    "academic_progression": {
+      "rule_id": "ST-004",
+      "description": "Course must represent academic progression from previous study (if applicable)",
+      "requirement": "mandatory",
+      "source_url": "https://www.gov.uk/student-visa/eligibility",
+      "source_section": "Academic progression",
+      "details": "Your new course must represent academic progression from your previous study, unless you are applying for your first UK study visa."
+    },
+    "genuine_student": {
+      "rule_id": "ST-005",
+      "description": "Must be a genuine student intending to study and leave UK after studies",
+      "requirement": "mandatory",
+      "source_url": "https://www.gov.uk/student-visa/eligibility",
+      "source_section": "Genuine student requirement",
+      "details": "You must be a genuine student who intends to study and leave the UK when your visa expires, unless switching to another visa."
+    }
+  },
+  "work_permissions": {
+    "degree_level": {
+      "term_time_hours": 20,
+      "vacation_hours": "full-time",
+      "description": "Students studying at degree level can work up to 20 hours per week during term time and full-time during vacations."
+    },
+    "below_degree": {
+      "term_time_hours": 10,
+      "vacation_hours": "full-time",
+      "description": "Students studying below degree level can work up to 10 hours per week during term time and full-time during vacations."
+    },
+    "prohibited_activities": [
+      "Self-employment",
+      "Business activity",
+      "Professional sportsperson",
+      "Entertainer",
+      "Doctor/dentist in training (unless on specific course)"
+    ]
+  },
+  "fees": {
+    "visa_application": 490,
+    "source_url": "https://www.gov.uk/student-visa/apply",
+    "last_checked": "2024-04-04",
+    "immigration_health_surcharge_per_year": 776,
+    "priority_service": 500,
+    "super_priority_service": 800
+  }
+}

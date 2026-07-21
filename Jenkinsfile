@@ -7,6 +7,7 @@ pipeline {
         SONAR_HOST_URL = "http://sonarqube:9000"
         SONAR_LOGIN = "admin"
         SONAR_PASSWORD = "admin"
+        PATH = "${env.PATH}:/tmp/bin"
     }
     
     stages {

@@ -1,0 +1,144 @@
+=====================================================
+  RESTART FIX - Auto-start after laptop restart
+=====================================================
+
+PROBLEM:
+  After laptop restart, containers don't start automatically.
+
+SOLUTION:
+  Create a systemd service that starts Docker Compose on boot.
+
+=====================================================
+  STEP-BY-STEP FIX (Run these in terminal)
+=====================================================
+
+STEP 1: Create a restart script
+  File: /usr/local/bin/start-on-boot.sh
+
+  Commands to run:
+    sudo nano /usr/local/bin/start-on-boot.sh
+
+  Paste this content:
+    #!/bin/bash
+    cd /home/unknown/Videos/Atlas-AI
+    docker compose up -d
+    sleep 30
+    echo "Services started: http://localhost:8080"
+
+  Save: Ctrl+X, then Y, then Enter
+  Make executable:
+    sudo chmod +x /usr/local/bin/start-on-boot.sh
+
+  Time: 1 minute
+
+------------------------------------------------------
+
+STEP 2: Create systemd service file
+  File: /etc/systemd/system/atlas-ai-cicd.service
+
+  Commands to run:
+    sudo nano /etc/systemd/system/atlas-ai-cicd.service
+
+  Paste this content:
+    [Unit]
+    Description=Atlas-AI CI/CD Pipeline
+    After=docker.service
+    Requires=docker.service
+
+    [Service]
+    Type=oneshot
+    RemainAfterExit=yes
+    WorkingDirectory=/home/unknown/Videos/Atlas-AI
+    ExecStart=/usr/bin/docker compose up -d
+    ExecStop=/usr/bin/docker compose down
+
+    [Install]
+    WantedBy=multi-user.target
+
+  Save: Ctrl+X, then Y, then Enter
+
+  Time: 1 minute
+
+------------------------------------------------------
+
+STEP 3: Enable the service
+  Commands to run:
+    sudo systemctl daemon-reload
+    sudo systemctl enable atlas-ai-cicd.service
+    sudo systemctl start atlas-ai-cicd.service
+
+  Time: 30 seconds
+
+------------------------------------------------------
+
+STEP 4: Verify
+  Commands to run:
+    sudo systemctl status atlas-ai-cicd.service
+    docker compose ps
+
+  You should see:
+    ✅ Jenkins running (port 8080)
+    ✅ SonarQube running (port 9000)
+    ✅ PostgreSQL running
+
+  Time: 30 seconds
+
+------------------------------------------------------
+
+STEP 5: Test restart
+  Command to test without rebooting:
+    sudo systemctl restart atlas-ai-cicd.service
+
+  Or to stop:
+    sudo systemctl stop atlas-ai-cicd.service
+
+  Time: 1 minute
+
+=====================================================
+  TOTAL TIME: ~4 minutes
+=====================================================
+
+=====================================================
+  AFTER THIS, EVERY RESTART WILL AUTO-START!
+=====================================================
+
+Next time you restart your laptop:
+  1. Wait for system to boot
+  2. Open browser: http://localhost:8080
+  3. DONE! No manual setup needed!
+
+=====================================================
+  USEFUL COMMANDS
+=====================================================
+
+  Check status:
+    sudo systemctl status atlas-ai-cicd.service
+
+  See logs:
+    sudo journalctl -u atlas-ai-cicd.service
+
+  Stop service:
+    sudo systemctl stop atlas-ai-cicd.service
+
+  Start service:
+    sudo systemctl start atlas-ai-cicd.service
+
+  Restart service:
+    sudo systemctl restart atlas-ai-cicd.service
+
+  Disable auto-start:
+    sudo systemctl disable atlas-ai-cicd.service
+
+=====================================================
+  MANUAL START (if service is not working)
+=====================================================
+
+  Just run:
+    cd /home/unknown/Videos/Atlas-AI
+    docker compose up -d
+
+  Or use setup.sh:
+    cd /home/unknown/Videos/Atlas-AI
+    ./setup.sh
+
+=====================================================

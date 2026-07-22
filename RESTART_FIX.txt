@@ -3,43 +3,26 @@
 =====================================================
 
 PROBLEM:
-  After laptop restart, containers don't start automatically.
+  After laptop restart, Jenkins and SonarQube don't start automatically.
+
+ROOT CAUSE:
+  Docker containers are stopped after restart.
+  We need something to start them automatically.
 
 SOLUTION:
-  Create a systemd service that starts Docker Compose on boot.
+  Two options are given below. Use either Systemd (recommended)
+  or Crontab (easiest if systemd doesn't work).
 
 =====================================================
-  STEP-BY-STEP FIX (Run these in terminal)
+  OPTION 1: SYSTEMD (Recommended, More Robust)
 =====================================================
 
-STEP 1: Create a restart script
-  File: /usr/local/bin/start-on-boot.sh
+This method starts Docker Compose automatically at boot.
 
-  Commands to run:
-    sudo nano /usr/local/bin/start-on-boot.sh
-
-  Paste this content:
-    #!/bin/bash
-    cd /home/unknown/Videos/Atlas-AI
-    docker compose up -d
-    sleep 30
-    echo "Services started: http://localhost:8080"
-
-  Save: Ctrl+X, then Y, then Enter
-  Make executable:
-    sudo chmod +x /usr/local/bin/start-on-boot.sh
-
-  Time: 1 minute
-
-------------------------------------------------------
-
-STEP 2: Create systemd service file
-  File: /etc/systemd/system/atlas-ai-cicd.service
-
-  Commands to run:
+STEP 1: Create service file
     sudo nano /etc/systemd/system/atlas-ai-cicd.service
 
-  Paste this content:
+Paste this exactly:
     [Unit]
     Description=Atlas-AI CI/CD Pipeline
     After=docker.service
@@ -55,90 +38,102 @@ STEP 2: Create systemd service file
     [Install]
     WantedBy=multi-user.target
 
-  Save: Ctrl+X, then Y, then Enter
+Save: Ctrl+X, then Y, then Enter
 
-  Time: 1 minute
-
-------------------------------------------------------
-
-STEP 3: Enable the service
-  Commands to run:
+STEP 2: Enable auto-start
     sudo systemctl daemon-reload
     sudo systemctl enable atlas-ai-cicd.service
     sudo systemctl start atlas-ai-cicd.service
 
-  Time: 30 seconds
-
-------------------------------------------------------
-
-STEP 4: Verify
-  Commands to run:
+STEP 3: Verify
     sudo systemctl status atlas-ai-cicd.service
     docker compose ps
 
-  You should see:
-    ✅ Jenkins running (port 8080)
-    ✅ SonarQube running (port 9000)
-    ✅ PostgreSQL running
+You should see:
+    ✅ jenkins-server Running
+    ✅ sonarqube-server Running
+    ✅ sonarqube-postgres Running
 
-  Time: 30 seconds
-
-------------------------------------------------------
-
-STEP 5: Test restart
-  Command to test without rebooting:
-    sudo systemctl restart atlas-ai-cicd.service
-
-  Or to stop:
-    sudo systemctl stop atlas-ai-cicd.service
-
-  Time: 1 minute
+USEFUL COMMANDS:
+    Check status:  sudo systemctl status atlas-ai-cicd.service
+    See logs:      sudo journalctl -u atlas-ai-cicd.service
+    Stop service:  sudo systemctl stop atlas-ai-cicd.service
+    Start service: sudo systemctl start atlas-ai-cicd.service
+    Test restart:  sudo systemctl restart atlas-ai-cicd.service
 
 =====================================================
-  TOTAL TIME: ~4 minutes
+  OPTION 2: CRONTAB (Easiest)
 =====================================================
 
-=====================================================
-  AFTER THIS, EVERY RESTART WILL AUTO-START!
-=====================================================
+This method uses Linux cron to run a script after reboot.
 
-Next time you restart your laptop:
-  1. Wait for system to boot
-  2. Open browser: http://localhost:8080
-  3. DONE! No manual setup needed!
+STEP 1: Create autostart script
+    sudo nano /usr/local/bin/start-on-boot.sh
 
-=====================================================
-  USEFUL COMMANDS
-=====================================================
-
-  Check status:
-    sudo systemctl status atlas-ai-cicd.service
-
-  See logs:
-    sudo journalctl -u atlas-ai-cicd.service
-
-  Stop service:
-    sudo systemctl stop atlas-ai-cicd.service
-
-  Start service:
-    sudo systemctl start atlas-ai-cicd.service
-
-  Restart service:
-    sudo systemctl restart atlas-ai-cicd.service
-
-  Disable auto-start:
-    sudo systemctl disable atlas-ai-cicd.service
-
-=====================================================
-  MANUAL START (if service is not working)
-=====================================================
-
-  Just run:
+Paste this exactly:
+    #!/bin/bash
+    sleep 10
     cd /home/unknown/Videos/Atlas-AI
     docker compose up -d
 
-  Or use setup.sh:
-    cd /home/unknown/Videos/Atlas-AI
-    ./setup.sh
+Save: Ctrl+X, then Y, then Enter
+
+Make it executable:
+    sudo chmod +x /usr/local/bin/start-on-boot.sh
+
+STEP 2: Add to crontab
+    crontab -e
+
+Add this line at the bottom:
+    @reboot /usr/local/bin/start-on-boot.sh
+
+Save and exit.
+
+USEFUL COMMANDS:
+    View cron jobs:    crontab -l
+    Remove cron jobs:  crontab -r
+
+=====================================================
+  WHICH OPTION TO CHOOSE?
+=====================================================
+
+  Option 1 (systemd):  RECOMMENDED. More reliable, easier to manage.
+  Option 2 (crontab):  SIMPLER if systemd is not available or complex.
+
+=====================================================
+  TESTING WITHOUT RESTARTING LAPTOP
+=====================================================
+
+Option 1 Test:
+    sudo systemctl restart atlas-ai-cicd.service
+    docker compose ps
+
+Option 2 Test:
+    /usr/local/bin/start-on-boot.sh
+    docker compose ps
+
+If you see "Running" → it works!
+
+=====================================================
+  COMPLETE SETUP SUMMARY
+=====================================================
+
+Your CI/CD pipeline setup is:
+
+    Files:
+        docker-compose.yml    (defines services)
+        setup.sh              (start script)
+        Jenkinsfile           (pipeline definition)
+        start-on-boot.sh      (restart script)
+        atlas-ai-cicd.service (systemd service)
+
+    Start services now:
+        ./setup.sh
+
+    Stop services:
+        docker compose down
+
+    Auto-start after reboot:
+        Enabled via systemd OR crontab
 
 =====================================================

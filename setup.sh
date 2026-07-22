@@ -1,89 +1,84 @@
 #!/bin/bash
-# ========================================
-# Atlas-AI CI/CD Pipeline - Complete Setup Script
-# This script sets up the entire project from scratch
-# ========================================
+# ============================================
+# Atlas-AI CI/CD Pipeline - Setup Script
+# Purpose: Start all services automatically
+# ============================================
 
-set -e  # Exit on any error
-
-echo "========================================="
-echo "  Atlas-AI CI/CD Pipeline Setup"
-echo "========================================="
+echo "=========================================="
+echo "  Starting Atlas-AI CI/CD Pipeline"
+echo "=========================================="
 echo ""
 
-# Step 1: Check if Docker is installed
-echo "[1/7] Checking Docker installation..."
-if ! command -v docker &> /dev/null; then
-    echo "Docker not found. Please install Docker first."
-    echo "Run: sudo apt install docker.io docker-compose"
-    exit 1
-fi
-echo "✅ Docker is installed: $(docker --version)"
+# Step 1: Go to project folder
+echo "[1/4] Going to project folder..."
+cd "$(dirname "$0")"
+echo "✅ Current folder: $(pwd)"
 
-# Step 2: Check if Docker Compose is installed
+# Step 2: Stop old containers if running
 echo ""
-echo "[2/7] Checking Docker Compose..."
-if ! command -v docker-compose &> /dev/null && ! docker compose version &> /dev/null; then
-    echo "Docker Compose not found. Please install Docker Compose."
-    exit 1
-fi
-echo "✅ Docker Compose is installed"
-
-# Step 3: Stop any existing containers
-echo ""
-echo "[3/7] Stopping existing containers..."
+echo "[2/4] Stopping old containers..."
 docker compose down 2>/dev/null || true
-echo "✅ Existing containers stopped"
+echo "✅ Old containers stopped"
 
-# Step 4: Start services
+# Step 3: Start services
 echo ""
-echo "[4/7] Starting services..."
+echo "[3/4] Starting services..."
 docker compose up -d
 echo "✅ Services started"
 
-# Step 5: Wait for services to be ready
+# Step 4: Wait
 echo ""
-echo "[5/7] Waiting for services to start (this may take 1-2 minutes)..."
+echo "[4/4] Waiting for services to start..."
 sleep 30
 
-# Step 6: Verify services
+# Show status
 echo ""
-echo "[6/7] Verifying services..."
+echo "=========================================="
+echo "  Status Check"
+echo "=========================================="
+echo ""
 
 # Check Jenkins
 if curl -s -o /dev/null -w "%{http_code}" http://localhost:8080 | grep -q "200"; then
     echo "✅ Jenkins is running at http://localhost:8080"
 else
-    echo "⚠️  Jenkins is not ready yet. Wait a bit more and check: http://localhost:8080"
+    echo "⏳ Jenkins is starting... Please wait 1-2 minutes"
+    echo "   Then open: http://localhost:8080"
 fi
 
 # Check SonarQube
 if curl -s -o /dev/null -w "%{http_code}" http://localhost:9000 | grep -q "200"; then
     echo "✅ SonarQube is running at http://localhost:9000"
 else
-    echo "⚠️  SonarQube is not ready yet. Wait a bit more and check: http://localhost:9000"
+    echo "⏳ SonarQube is starting... Please wait 1-2 minutes"
+    echo "   Then open: http://localhost:9000"
 fi
 
-# Step 7: Display information
+# Show credentials
 echo ""
-echo "========================================="
+echo "=========================================="
+echo "  Login Credentials"
+echo "=========================================="
+echo "Jenkins:"
+echo "  URL:      http://localhost:8080"
+echo "  Username: admin"
+echo "  Password: admin123"
+echo ""
+echo "SonarQube:"
+echo "  URL:      http://localhost:9000"
+echo "  Username: admin"
+echo "  Password: admin"
+echo ""
+echo "=========================================="
 echo "  Setup Complete!"
-echo "========================================="
-echo ""
-echo "Services running:"
-echo "  - Jenkins:     http://localhost:8080"
-echo "  - SonarQube:   http://localhost:9000"
-echo ""
-echo "Credentials:"
-echo "  - Jenkins:     admin / admin123"
-echo "  - SonarQube:   admin / admin"
+echo "=========================================="
 echo ""
 echo "Next steps:"
-echo "  1. Access Jenkins at http://localhost:8080"
-echo "  2. Complete initial setup if needed"
-echo "  3. Create pipeline job (if not exists)"
-echo "  4. Push code to trigger pipeline"
+echo "  1. Open browser and go to http://localhost:8080"
+echo "  2. Login with: admin / admin123"
+echo "  3. Create pipeline job if not exists"
+echo "  4. Start coding!"
 echo ""
 echo "To stop: docker compose down"
-echo "To start: docker compose up -d"
+echo "To start again: ./setup.sh"
 echo ""

@@ -4,19 +4,16 @@ services:
   jenkins:
     image: jenkins/jenkins:lts
     container_name: jenkins-server
-    user: root
     restart: unless-stopped
     ports:
       - "8080:8080"
       - "50000:50000"
     volumes:
       - jenkins_data:/var/jenkins_home
-      - /var/run/docker.sock:/var/run/docker.sock
     networks:
       - devops-network
     environment:
       - JAVA_OPTS=-Djenkins.install.runSetupWizard=false
-    privileged: true
 
   sonarqube:
     image: sonarqube:community

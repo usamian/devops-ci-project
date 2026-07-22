@@ -1,0 +1,260 @@
+=====================================================
+  ATLAS-AI CI/CD PIPELINE - VIVA PRACTICE GUIDE
+=====================================================
+
+This guide will help you understand and explain
+your project in viva easily.
+
+=====================================================
+  1. WHAT IS THIS PROJECT?
+=====================================================
+
+ANSWER:
+"I have created a CI/CD pipeline using Docker.
+It automatically starts 3 services:
+1. Jenkins - For building and deploying code
+2. SonarQube - For code quality checking
+3. PostgreSQL - Database for SonarQube
+
+The user just needs to run one command:
+  ./setup.sh
+
+And everything starts automatically!"
+
+=====================================================
+  2. WHAT FILES DID YOU CREATE?
+=====================================================
+
+ANSWER:
+"I created 4 main files:
+
+1. docker-compose.yml
+   - Defines all services (Jenkins, SonarQube, PostgreSQL)
+   - Single file to start everything
+
+2. setup.sh (Main bash script)
+   - Automatically starts all services
+   - Checks if they are running
+   - Shows login credentials
+
+3. docker-install.sh
+   - Installs Docker on Ubuntu/Linux
+   - Helps if Docker is not installed
+
+4. Jenkinsfile
+   - Defines the CI/CD pipeline
+   - Has 3 stages: Checkout, SonarQube, Docker Build"
+
+=====================================================
+  3. WHAT DOES setup.sh DO?
+=====================================================
+
+ANSWER:
+"setup.sh is a bash script that automates everything:
+
+Step 1: Goes to project folder automatically
+Step 2: Stops old containers (if any)
+Step 3: Starts all services using docker compose
+Step 4: Waits 30 seconds for services to start
+Step 5: Checks if Jenkins is running
+Step 6: Checks if SonarQube is running
+Step 7: Shows login credentials
+Step 8: Shows next steps to user
+
+The user just runs: ./setup.sh
+And everything is ready!"
+
+=====================================================
+  4. WHAT IS IN docker-compose.yml?
+=====================================================
+
+ANSWER:
+"docker-compose.yml defines 3 services:
+
+1. jenkins-server
+   - Runs Jenkins (port 8080)
+   - Has Docker CLI installed
+   - Stores data in volumes
+
+2. sonarqube-server
+   - Runs SonarQube (port 9000)
+   - Uses PostgreSQL database
+   - Checks code quality
+
+3. sonarqube-db
+   - PostgreSQL database for SonarQube
+   - Stores scan results
+
+All services are connected via a network."
+
+=====================================================
+  5. WHAT IS JENKINSFILE?
+=====================================================
+
+ANSWER:
+"Jenkinsfile defines the CI/CD pipeline with 3 stages:
+
+Stage 1: Checkout
+  - Gets code from GitHub repository
+
+Stage 2: SonarQube Analysis
+  - Scans code for quality issues
+  - Checks for bugs, vulnerabilities, code smells
+  - Uses SonarQube token for authentication
+
+Stage 3: Build Docker Image
+  - Builds Docker image from Dockerfile
+  - Pushes to registry (if configured)
+
+The pipeline runs automatically when code is pushed to GitHub."
+
+=====================================================
+  6. WHAT IS SONARQUBE?
+=====================================================
+
+ANSWER:
+"SonarQube is a code quality tool.
+It checks:
+- Bugs in code
+- Security vulnerabilities
+- Code smells (bad practices)
+- Code coverage
+- Duplicate code
+
+It helps developers write better code."
+
+=====================================================
+  7. WHAT IS DOCKER COMPOSE?
+=====================================================
+
+ANSWER:
+"Docker Compose is a tool to run multiple Docker containers
+with a single command.
+
+Instead of running:
+  docker run jenkins
+  docker run sonarqube
+  docker run postgres
+
+We just run:
+  docker compose up -d
+
+And all 3 services start automatically."
+
+=====================================================
+  8. HOW DOES THE PIPELINE WORK?
+=====================================================
+
+ANSWER:
+"When developer pushes code to GitHub:
+
+1. GitHub webhook triggers Jenkins
+2. Jenkins starts the pipeline
+3. Pipeline runs 3 stages:
+   - Checkout: Gets the code
+   - SonarQube: Checks code quality
+   - Docker Build: Builds Docker image
+4. Developer gets feedback on code quality"
+
+=====================================================
+  9. WHAT ARE THE CREDENTIALS?
+=====================================================
+
+ANSWER:
+"Default credentials:
+
+Jenkins:
+  URL: http://localhost:8080
+  Username: admin
+  Password: admin123
+
+SonarQube:
+  URL: http://localhost:9000
+  Username: admin
+  Password: admin"
+
+=====================================================
+  10. HOW TO USE THIS PROJECT?
+=====================================================
+
+ANSWER:
+"To start:
+  ./setup.sh
+
+To stop:
+  docker compose down
+
+To start again:
+  ./setup.sh
+
+First time setup (5-10 minutes):
+1. Run ./setup.sh
+2. Open http://localhost:8080
+3. Unlock Jenkins with initial password
+4. Create admin user
+5. Install plugins
+6. Create pipeline job
+7. Configure SonarQube token"
+
+=====================================================
+  QUICK PRACTICE QUESTIONS
+=====================================================
+
+Q1: What is the main purpose of this project?
+A1: To automate CI/CD pipeline using Docker
+
+Q2: How many services are running?
+A2: 3 services - Jenkins, SonarQube, PostgreSQL
+
+Q3: What command starts everything?
+A3: ./setup.sh
+
+Q4: What does Jenkins do?
+A4: Builds and deploys code automatically
+
+Q5: What does SonarQube do?
+A5: Checks code quality
+
+Q6: What is Docker Compose?
+A6: Tool to run multiple containers with one command
+
+Q7: What is CI/CD?
+A7: Continuous Integration / Continuous Deployment
+    - Automatically build, test, and deploy code
+
+Q8: What is a pipeline?
+A8: Series of automated steps to build and deploy code
+
+Q9: What is Jenkinsfile?
+A9: File that defines the pipeline stages
+
+Q10: How do you stop services?
+A10: docker compose down
+
+=====================================================
+  TIPS FOR VIVA
+=====================================================
+
+1. Be confident and speak clearly
+2. Use simple words, not too technical
+3. Give examples if possible
+4. If you don't know something, say "I don't know"
+   Don't make up answers
+5. Practice explaining the script line by line
+6. Know the purpose of each file
+7. Understand the flow: Code -> GitHub -> Jenkins -> Build
+
+=====================================================
+  MOST IMPORTANT THINGS TO REMEMBER
+=====================================================
+
+1. setup.sh starts everything automatically
+2. 3 services: Jenkins, SonarQube, PostgreSQL
+3. Jenkins builds code, SonarQube checks quality
+4. Docker Compose manages all containers
+5. Jenkinsfile defines the pipeline
+6. Credentials: admin / admin123
+
+=====================================================
+  GOOD LUCK! 🎓
+=====================================================

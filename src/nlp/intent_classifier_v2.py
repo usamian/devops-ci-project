@@ -2,7 +2,7 @@
 Atlas AI — Enhanced Intent Classifier v2
 Fast, comprehensive intent classification with 12+ categories.
 Uses optimized keyword matching with confidence scoring for instant responses.
-No ML model dependency — pure rule based for maximum speed.
+No ML model dependency — pure rule based for maximum speed....
 """
 
 import re
